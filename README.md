@@ -11,10 +11,10 @@
 
 ### 🧑‍💻 About Me
 
-- 🇹🇷 **9th Grade** at Maltepe Uğur Anadolu Lisesi, Istanbul
+- 🇹🇷 **9th Grade** at Istanbul
 - 🗣️ Multilingual: **English (C1) · Turkish · Arabic**
 - 🔐 Interested in **cybersecurity, data scraping, and open source**
-- 🏛️ **CUSA Minority Leader** | Former Head Instructor & Senior Instructor
+- 🏛️ **Former CUSA Minority/Majority Leader** |  Head Instructor & Senior Instructor
 - 🎤 **MUN Chair** & Student Council
 - ⚙️ CLI-first — prefer manual tools over GUI wrappers
 - 🌱 Currently learning: **API building, competitive programming, browser extensions**
