@@ -22,6 +22,7 @@
 
 | Project | What it does | Stack | Live Demo |
 |---------|-------------|-------|-----------|
+| [**roblox-anticheat-the-hard-way**](https://github.com/0xmortuex/roblox-anticheat-the-hard-way) | Open-source course: build server-side anticheat for Roblox from scratch — speed, fly, noclip, aimbot detection with Bayesian analysis. | Luau · Roblox | |
 | [**CodeLens**](https://github.com/0xmortuex/CodeLens) | Paste code, get an instant AI security audit, quality score, and suggestions as a visual report card. | JS · Cloudflare Workers · Claude | [Try it](https://0xmortuex.github.io/CodeLens/) |
 | [**LexScope**](https://github.com/0xmortuex/LexScope) | Interactive legislation explorer with AI-parsed sections, definitions, cross-references, and improvement suggestions. | JS · Cloudflare Workers · Claude | [Try it](https://0xmortuex.github.io/LexScope/) |
 | [**LoopholeMap**](https://github.com/0xmortuex/LoopholeMap) | Find every loophole in any regulation, visualized as an interactive D3.js node graph. | JS · D3.js · Claude · Cloudflare Workers | [Try it](https://0xmortuex.github.io/LoopholeMap/) |
