@@ -22,8 +22,9 @@
 
 | Project | What it does | Stack | Live Demo |
 |---------|-------------|-------|-----------|
-| [**roblox-anticheat-the-hard-way**](https://github.com/0xmortuex/roblox-anticheat-the-hard-way) | Open-source course: build server-side anticheat for Roblox from scratch — speed, fly, noclip, aimbot detection with Bayesian analysis. | Luau · Roblox | |
+| [**roblox-anticheat-the-hard-way**](https://github.com/0xmortuex/roblox-anticheat-the-hard-way) | Open-source course: build server-side anticheat for Roblox from scratch — speed, fly, noclip, aimbot detection with Bayesian analysis. 7 modules, working code, break-it challenges. | Luau | |
 | [**CodeLens**](https://github.com/0xmortuex/CodeLens) | Paste code, get an instant AI security audit, quality score, and suggestions as a visual report card. | JS · Cloudflare Workers · Claude | [Try it](https://0xmortuex.github.io/CodeLens/) |
+| [**TermsTrap**](https://github.com/0xmortuex/TermsTrap) | Paste any ToS and instantly see what you're actually agreeing to — AI highlights data selling, forced arbitration, and hidden traps with a visual risk score. | JS · Cloudflare Workers · Claude | [Try it](https://0xmortuex.github.io/TermsTrap/) |
 | [**LexScope**](https://github.com/0xmortuex/LexScope) | Interactive legislation explorer with AI-parsed sections, definitions, cross-references, and improvement suggestions. | JS · Cloudflare Workers · Claude | [Try it](https://0xmortuex.github.io/LexScope/) |
 | [**LoopholeMap**](https://github.com/0xmortuex/LoopholeMap) | Find every loophole in any regulation, visualized as an interactive D3.js node graph. | JS · D3.js · Claude · Cloudflare Workers | [Try it](https://0xmortuex.github.io/LoopholeMap/) |
 | [**DebateBot**](https://github.com/0xmortuex/DebateBot) | Enter any topic, get the strongest arguments for both sides with evidence, rebuttals, and fallacy detection. | JS · Cloudflare Workers · Claude | [Try it](https://0xmortuex.github.io/DebateBot/) |
