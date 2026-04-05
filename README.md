@@ -46,7 +46,7 @@
 
 ### 🛠️ Tech Stack
 
-**Languages:** Python · TypeScript · JavaScript · HTML/CSS · Lua
+**Languages:** Python · TypeScript · JavaScript · HTML/CSS · Luau
 
 **Tools:** Git · Cloudflare Workers · Chart.js · D3.js · VS Code · PowerShell · Brave
 
