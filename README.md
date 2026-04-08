@@ -39,4 +39,45 @@
 
 | Plugin | What it does |
 |--------|-------------|
-| [**InactivityTracker**](https://github.com/0xmortuex/vencord-inactivitytracker) | Tracks and flags inactive members acr
+| [**InactivityTracker**](https://github.com/0xmortuex/vencord-inactivitytracker) | Tracks and flags inactive members across Discord servers with configurable thresholds |
+| [**QuickNotes**](https://github.com/0xmortuex/vencord-quicknotes) | Persistent per-user notes accessible from any server via DataStore |
+| [**ServerClock**](https://github.com/0xmortuex/vencord-serverclock) | Adds a configurable timezone clock to the Discord server list |
+| [**RoleMembers**](https://github.com/0xmortuex/vencord-rolemembers) | View all members of any role directly from the role context menu |
+| [**DMOrganizer**](https://github.com/0xmortuex/vencord-dmorganizer) | Sorts and filters DM conversations with priority pinning |
+
+---
+
+### 🛠️ Tech Stack
+
+**Languages:** Python · TypeScript · JavaScript · HTML/CSS · Lua
+
+**Tools:** Git · Cloudflare Workers · Cloudflare KV · Chart.js · D3.js · VS Code · PowerShell
+
+---
+
+### 🌍 Open Source Contributions
+
+- 🔧 [**network-port-scanner**](https://github.com/preethipakala/network-port-scanner) — Added JSON export format for scan results
+- ✅ [**pumpfun-cli**](https://github.com/chainstacklabs/pumpfun-cli) — Input validation for slippage range in buy/sell commands
+- 📄 [**SOUL_SENSE_EXAM**](https://github.com/nupurmadaan04/SOUL_SENSE_EXAM) — README overhaul with Mermaid architecture diagrams
+
+---
+
+### 📊 GitHub Stats
+
+<p>
+  <img src="https://github-readme-stats.vercel.app/api?username=0xmortuex&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=0xmortuex&layout=compact&theme=radical&hide_border=true" alt="Top Languages" />
+</p>
+
+<p>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=0xmortuex&theme=radical&hide_border=true" alt="GitHub Streak" />
+</p>
+
+---
+
+### 🤝 Connect
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-050505?style=for-the-badge&logo=vercel&logoColor=00ff88)](https://0xmortuex.github.io)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0xmortuex)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/967761009819385948)
