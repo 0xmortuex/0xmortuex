@@ -14,22 +14,17 @@
 
 ---
 
-# 🏆 The Big Three
+# 🏆 Flagships
 
-*My strongest work, in order. Start here.*
+*My strongest work, best first.*
 
-## 1 · [Mort](https://github.com/0xmortuex/Mort) — I built a language, then wrote an OS in it
+## 1 · [Mort](https://github.com/0xmortuex/Mort) — my own programming language
 
 [![CI](https://github.com/0xmortuex/Mort/actions/workflows/ci.yml/badge.svg)](https://github.com/0xmortuex/Mort/actions/workflows/ci.yml)
 ![tests](https://img.shields.io/badge/tests-101%20passing-brightgreen)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 
-**Mort** is a statically-typed programming language that compiles to C. The whole compiler — lexer, parser, type checker, C code generator — is written from scratch in Python with **zero libraries**. And it exists for one reason: the same compiler builds **MORT OS**, a multiboot kernel *written in Mort* that boots in QEMU, sets up an IDT, remaps the PICs, and takes interrupt-driven keyboard input into an interactive shell.
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/0xmortuex/Mort/main/docs/mortos.png" alt="MORT OS booted in QEMU" width="640" />
-<br/><sub>MORT OS in QEMU — the shell, keyboard driver, and command parser are all written in Mort.</sub>
-</div>
+**Mort** is a statically-typed programming language that compiles to C. The whole compiler — lexer, parser, type checker, C code generator — is written from scratch in Python with **zero libraries**. Pointers, structs, fixed-width integers, and a freestanding mode that emits bare-metal C — because Mort exists for a bigger goal ↓
 
 ```rust
 fn fib(n: int) -> int {
@@ -38,15 +33,22 @@ fn fib(n: int) -> int {
 }
 ```
 
-> Why compile to C instead of an interpreter? Because an interpreter can't boot. Mort emits freestanding-friendly C so the kernel and your `hello.mx` go through the exact same pipeline.
+## 2 · [MORT OS](https://github.com/0xmortuex/MortOS) — an operating system written in Mort
 
-## 2 · [Vex](https://github.com/0xmortuex/Vex) — a desktop browser built just for you
+The reason the language exists: **an OS kernel written in my own language.** It boots on QEMU *and real hardware* (BIOS/UEFI bootable ISO you can write to a USB stick) — 32-bit protected mode, a GDT/IDT with remapped PICs, interrupt-driven keyboard input, a PIT timer, CPU exception handlers, and an interactive shell with command history. Why does Mort compile to C instead of running on an interpreter? **Because an interpreter can't boot.**
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/0xmortuex/MortOS/main/docs/mortos.png" alt="MORT OS booted in QEMU" width="640" />
+<br/><sub>MORT OS in QEMU — the shell, keyboard driver, and command parser are all written in Mort.</sub>
+</div>
+
+## 3 · [Vex](https://github.com/0xmortuex/Vex) — a desktop browser built just for you
 
 A fast, private, minimal **Electron browser** I actually ship — versioned releases, changelog, self-hosting docs, the whole thing. Arc-style vertical tabs and tab groups, a `Ctrl+K` command bar that does everything, ad & tracker blocking on by default, workspaces, tab sleep, split screen — and a **built-in AI agent** that can summarize pages, answer questions about what you're reading, and click/type to complete tasks, running on a local Ollama model or your own cloud worker.
 
 **[⬇ Download for Windows](https://0xmortuex.github.io/vex-website/)** · [Latest release](https://github.com/0xmortuex/Vex/releases/latest) · [Self-hosting guide](https://github.com/0xmortuex/Vex/blob/main/SELF_HOSTING.md)
 
-## 3 · [mortuexOS](https://0xmortuex.github.io) — my portfolio is a desktop OS
+## 4 · [mortuexOS](https://0xmortuex.github.io) — my portfolio is a desktop OS
 
 Instead of a portfolio page, I built a **fully interactive desktop operating system in the browser** — windows, a taskbar, apps. Every project below runs as a demo you can open from it. [Boot it.](https://0xmortuex.github.io)
 
@@ -117,10 +119,18 @@ The next tier — each one solves a real problem end to end:
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=0xmortuex&show_icons=true&theme=transparent&hide_border=true&rank_icon=github" height="165" alt="GitHub stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=0xmortuex&layout=compact&theme=transparent&hide_border=true&langs_count=8" height="165" alt="Top languages" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/0xmortuex/0xmortuex/main/generated/overview-dark.svg" />
+  <img src="https://raw.githubusercontent.com/0xmortuex/0xmortuex/main/generated/overview-light.svg" height="165" alt="GitHub stats" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/0xmortuex/0xmortuex/main/generated/languages-dark.svg" />
+  <img src="https://raw.githubusercontent.com/0xmortuex/0xmortuex/main/generated/languages-light.svg" height="165" alt="Top languages" />
+</picture>
 
 <img src="https://streak-stats.demolab.com?user=0xmortuex&theme=transparent&hide_border=true" height="165" alt="Streak" />
+
+<sub>The stat cards above are self-generated by [a workflow in this repo](.github/workflows/stats.yml) — no third-party stats service.</sub>
 
 </div>
 
