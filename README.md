@@ -1,18 +1,18 @@
 <div align="center">
 
 <a href="https://0xmortuex.github.io">
-  <img src="assets/hero.svg" width="880" alt="Fadi · 0xmortuex — 9th grade, Istanbul. I build compilers, kernels, browsers and security tools. mort: my programming language. mortos: an OS kernel written in Mort that boots on real hardware. vex: a desktop browser with a built-in AI agent." />
+  <img src="assets/hero.svg" width="880" alt="Fadi · 0xmortuex — 9th grade, Istanbul. I build compilers, kernels, browsers and security tools. mort: my programming language. mortos: an OS kernel written in Mort that boots on real hardware. vex: a desktop browser with a built-in AI agent. flashmind: an AI study engine with OCR and FSRS spaced repetition." />
 </a>
 
 <br/><br/>
 
-<a href="https://0xmortuex.github.io"><b>🖥&nbsp;boot mortuexOS</b></a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://0xmortuex.github.io/vex-website/"><b>⬇&nbsp;download Vex</b></a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://github.com/0xmortuex/Mort"><b>λ&nbsp;Mort</b></a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://github.com/0xmortuex/MortOS"><b>💾&nbsp;MORT OS</b></a>
+<a href="https://0xmortuex.github.io/FlashMind/"><b>⚡&nbsp;try FlashMind</b></a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://0xmortuex.github.io/vex-website/"><b>⬇&nbsp;download Vex</b></a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://github.com/0xmortuex/Mort"><b>λ&nbsp;Mort</b></a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://github.com/0xmortuex/MortOS"><b>💾&nbsp;MORT OS</b></a>
 
 </div>
 
 <br/>
 
-## The Mort stack — I built a language, then wrote an OS in it
+## <img src="assets/icon-mort.svg" width="26" height="26" align="top" alt="" /> The Mort stack — I built a language, then wrote an OS in it
 
 Most people learn a programming language. I wanted to know what's *underneath* — so I built **[Mort](https://github.com/0xmortuex/Mort)**: a statically-typed language whose entire compiler — lexer, parser, type checker, C code generator — is written from scratch in Python with **zero libraries**. Mort exists for one reason: **[MORT OS](https://github.com/0xmortuex/MortOS)**, an operating system written in it. Why does Mort compile to C instead of running on an interpreter? **Because an interpreter can't boot.**
 
@@ -29,7 +29,7 @@ fn fib(n: int) -> int {
 }
 ```
 
-What the kernel does today:
+### <img src="assets/icon-mortos.svg" width="22" height="22" align="top" alt="" /> MORT OS — what the kernel does today
 
 - **Boots real machines, not just QEMU** — Limine BIOS/UEFI hybrid ISO; write it to a USB stick and it boots a real PC in 32-bit protected mode
 - **Drives real hardware** — interrupt-driven PS/2 keyboard, PIT timer, ATA PIO disk driver, framebuffer graphics with VGA text fallback
@@ -54,9 +54,27 @@ A fast, private, minimal **Electron browser** with versioned releases, a changel
 
 **[⬇ Download for Windows](https://0xmortuex.github.io/vex-website/)** · [Latest release](https://github.com/0xmortuex/Vex/releases/latest) · [Self-hosting guide](https://github.com/0xmortuex/Vex/blob/main/SELF_HOSTING.md)
 
-## mortuexOS — a portfolio you boot
+<div align="center">
 
-Instead of a portfolio page, I built a **desktop operating system in the browser** — windows, a taskbar, apps. Every web project below runs as a demo you can open inside it. **[Boot it →](https://0xmortuex.github.io)**
+<a href="https://0xmortuex.github.io/vex-website/"><img src="assets/vex.png" width="800" alt="Vex — a browser built just for you: vertical tabs, on-device and cloud AI, privacy hardening, ad and tracker blocking, and a Ctrl+K command bar" /></a>
+
+<sub>Vex — vertical tabs, built-in AI, ad blocking, and a command bar, in a no-bloat desktop browser.</sub>
+
+</div>
+
+## <img src="assets/icon-flashmind.svg" width="26" height="26" align="top" alt="" /> FlashMind — the AI study engine I built for school
+
+Paste notes, upload a PDF, snap a photo (OCR in English **and** Turkish), drop a YouTube link, or just name a topic — **FlashMind** turns it into summary notes, a 3D flip-card deck, and a Turkish-style mixed exam with AI-graded open-ended questions. Studying runs on a hand-rolled **FSRS-4.5 spaced-repetition** scheduler, with a mistake notebook that auto-files wrong answers, Feynman mode, streak tracking, and a 6-month analytics heatmap. No framework — vanilla JS with Claude doing the thinking through a Cloudflare Worker — and it exports to Anki, Markdown, and PDF.
+
+**[⚡ Try FlashMind](https://0xmortuex.github.io/FlashMind/)** · [Source](https://github.com/0xmortuex/FlashMind)
+
+<div align="center">
+
+<a href="https://0xmortuex.github.io/FlashMind/"><img src="assets/flashmind.png" width="800" alt="FlashMind — pick a subject and topic from the 10th-grade Turkish curriculum, or paste anything; it builds notes, flashcards, and an exam" /></a>
+
+<sub>FlashMind — pick a subject or paste anything; it builds the notes, the deck, and the exam.</sub>
+
+</div>
 
 ## Selected work
 
@@ -81,12 +99,11 @@ Instead of a portfolio page, I built a **desktop operating system in the browser
 </details>
 
 <details>
-<summary><b>🤖 AI-powered tools</b> — 6 more projects</summary>
+<summary><b>🤖 AI-powered tools</b> — 5 more projects</summary>
 <br/>
 
 | Project | Description | Live Demo |
 |---------|-------------|-----------|
-| [**FlashMind**](https://github.com/0xmortuex/FlashMind) | AI study tool — paste notes or upload a PDF, get flashcards, quizzes, and summary notes | [Demo](https://0xmortuex.github.io/FlashMind/) |
 | [**LoopholeMap**](https://github.com/0xmortuex/LoopholeMap) | Find vulnerabilities in any regulation — interactive node graph + AI analysis | [Demo](https://0xmortuex.github.io/LoopholeMap/) |
 | [**AIJudge**](https://github.com/0xmortuex/AIJudge) | Describe an argument, AI delivers a verdict with shareable court ruling cards | [Demo](https://0xmortuex.github.io/AIJudge/) |
 | [**TermsTrap**](https://github.com/0xmortuex/TermsTrap) | ToS analyzer that finds hidden clauses with risk scoring | [Demo](https://0xmortuex.github.io/TermsTrap/) |
@@ -96,11 +113,12 @@ Instead of a portfolio page, I built a **desktop operating system in the browser
 </details>
 
 <details>
-<summary><b>🛠 Apps, games & plugins</b> — 6 more projects</summary>
+<summary><b>🛠 Apps, games & plugins</b> — 7 more projects</summary>
 <br/>
 
 | Project | Description | Live Demo |
 |---------|-------------|-----------|
+| [**mortuexOS**](https://github.com/0xmortuex/0xmortuex.github.io) | My portfolio as a desktop OS in the browser — windows, a taskbar, apps; web projects open inside it | [Demo](https://0xmortuex.github.io) |
 | [**ChatRoom**](https://github.com/0xmortuex/ChatRoom) | Real-time anonymous chat with rooms — Cloudflare KV backend | [Demo](https://0xmortuex.github.io/ChatRoom/) |
 | [**BillForge**](https://github.com/0xmortuex/BillForge) | CUSA legislative bill builder with templates and AI assist | [Demo](https://0xmortuex.github.io/BillForge/) |
 | [**GitPulse**](https://github.com/0xmortuex/GitPulse) | GitHub profile visualizer with charts | [Demo](https://0xmortuex.github.io/GitPulse/) |
@@ -155,6 +173,6 @@ Instead of a portfolio page, I built a **desktop operating system in the browser
 
 <div align="center">
 
-<sub>Every web project above is open source and live on GitHub Pages. Not sure where to start? <a href="https://0xmortuex.github.io"><b>Boot mortuexOS.</b></a></sub>
+<sub>Every web project above is open source and live on GitHub Pages. Not sure where to start? <a href="https://0xmortuex.github.io/FlashMind/"><b>Try FlashMind.</b></a></sub>
 
 </div>
