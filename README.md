@@ -45,6 +45,8 @@ fn fib(n: int) -> int {
 
 </div>
 
+> 🚧 **Now building: [mortnet](https://github.com/0xmortuex/mortnet)** — a TCP/IP stack for MORT OS, written in Mort, from NIC driver to serving this portfolio on real hardware.
+
 ## Vex — a browser I actually ship
 
 A fast, private, minimal **Electron browser** with versioned releases, a changelog, and self-hosting docs. Arc-style vertical tabs and tab groups, a `Ctrl+K` command bar that does everything, ad & tracker blocking on by default, workspaces, tab sleep, split screen — and a **built-in AI agent** that summarizes pages, answers questions about what you're reading, and can click and type to complete tasks, running on a local Ollama model or your own cloud worker.
