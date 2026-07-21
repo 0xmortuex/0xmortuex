@@ -83,7 +83,9 @@ Paste notes, upload a PDF, snap a photo (OCR in English **and** Turkish), drop a
 | 🔍 | [**ReconX**](https://github.com/0xmortuex/ReconX) · [demo](https://0xmortuex.github.io/ReconX/) | Full-spectrum domain recon in one dashboard — DNS, WHOIS, SSL, headers, tech stack, subdomains |
 | 🔑 | [**PassCrack**](https://github.com/0xmortuex/PassCrack) · [demo](https://0xmortuex.github.io/PassCrack/) | Password analyzer that simulates real attack techniques — crack times, pattern detection, entropy. 100% in-browser, zero data transmitted |
 | 🛡️ | [**Roblox Anticheat: The Hard Way**](https://github.com/0xmortuex/roblox-anticheat-the-hard-way) | A written-from-scratch, production-grade server-side anticheat — every line explained, built as a teaching resource |
+| 🎛️ | [**Nexus**](https://github.com/0xmortuex/Nexus) | Process Lasso-style Windows optimizer in WPF — per-exe priority/affinity/EcoQoS rules on hybrid CPUs, dynamic restraint under load, a crash-safe Game Mode journaled to disk, and every tweak backed up with working undo |
 | 🧩 | [**RoSuite**](https://github.com/0xmortuex/RoSuite) | Free RoPro alternative as a Chrome extension — server browser, player info, trade calculator, game stats |
+| 📖 | [**Zine**](https://github.com/0xmortuex/Zine) | A manga reader with an editorial, print-zine design language — paged & webtoon modes, smart page preloading, autoplay, six themes; React 19 + the MangaDex API |
 | 🖥️ | [**MiniOS**](https://github.com/0xmortuex/MiniOS) · [demo](https://0xmortuex.github.io/MiniOS/) | The browser-OS experiment that grew into mortuexOS |
 
 <details>
