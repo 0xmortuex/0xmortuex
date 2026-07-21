@@ -45,7 +45,7 @@ fn fib(n: int) -> int {
 
 </div>
 
-> 🚧 **Now building: [mortnet](https://github.com/0xmortuex/mortnet)** — a TCP/IP stack for MORT OS, written in Mort, from NIC driver to serving this portfolio on real hardware. **M1 done:** MORT OS now [transmits real Ethernet frames](https://github.com/0xmortuex/mortnet#readme) through an RTL8139 driver written from scratch.
+> 🚧 **Now building: [mortnet](https://github.com/0xmortuex/mortnet)** — a TCP/IP stack for MORT OS, written in Mort, from NIC driver to serving this portfolio on real hardware. **M2 done:** MORT OS now [speaks ARP, IPv4 and ICMP](https://github.com/0xmortuex/mortnet#readme) — it completes a ping round trip and answers pings, all through a stack written from scratch.
 
 ## Vex — a browser I actually ship
 
