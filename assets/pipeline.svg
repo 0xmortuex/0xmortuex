@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="182" viewBox="0 0 880 182" role="img" aria-label="The Mort toolchain: hello.mort source is compiled by mortc (my compiler, written from scratch with zero dependencies) to freestanding C, cross-compiled 32-bit with zig cc, packed into a Limine BIOS/UEFI ISO, and booted on real hardware. User programs compile the same way and run via int 0x80 syscalls.">
+  <rect x="0.5" y="0.5" width="879" height="181" rx="12" fill="#0d1117" stroke="#30363d"/>
+
+  <text x="28" y="36" font-size="13" fill="#8b949e" font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace">// how MORT OS gets built — from my language to bare metal</text>
+
+  <g font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace">
+    <!-- node 1: hello.mort -->
+    <rect x="24" y="64" width="96" height="52" rx="8" fill="#161b22" stroke="#30363d"/>
+    <text x="72" y="86" text-anchor="middle" font-size="12" font-weight="700" fill="#e6edf3">hello.mort</text>
+    <text x="72" y="103" text-anchor="middle" font-size="9" fill="#8b949e">Mort source</text>
+
+    <!-- node 2: mortc -->
+    <rect x="146" y="64" width="170" height="52" rx="8" fill="#161b22" stroke="#22d3ee" stroke-width="1.4"/>
+    <text x="231" y="86" text-anchor="middle" font-size="13" font-weight="700" fill="#22d3ee">mortc — my compiler</text>
+    <text x="231" y="103" text-anchor="middle" font-size="9" fill="#8b949e">written from scratch · 0 deps</text>
+
+    <!-- node 3: hello.c -->
+    <rect x="342" y="64" width="90" height="52" rx="8" fill="#161b22" stroke="#30363d"/>
+    <text x="387" y="86" text-anchor="middle" font-size="12" font-weight="700" fill="#e6edf3">hello.c</text>
+    <text x="387" y="103" text-anchor="middle" font-size="9" fill="#8b949e">freestanding</text>
+
+    <!-- node 4: zig cc -->
+    <rect x="458" y="64" width="96" height="52" rx="8" fill="#161b22" stroke="#30363d"/>
+    <text x="506" y="86" text-anchor="middle" font-size="12" font-weight="700" fill="#e6edf3">zig cc</text>
+    <text x="506" y="103" text-anchor="middle" font-size="9" fill="#8b949e">32-bit cross</text>
+
+    <!-- node 5: mortos.iso -->
+    <rect x="580" y="64" width="108" height="52" rx="8" fill="#161b22" stroke="#30363d"/>
+    <text x="634" y="86" text-anchor="middle" font-size="12" font-weight="700" fill="#e6edf3">mortos.iso</text>
+    <text x="634" y="103" text-anchor="middle" font-size="9" fill="#8b949e">limine BIOS/UEFI</text>
+
+    <!-- node 6: real hardware -->
+    <rect x="714" y="64" width="140" height="52" rx="8" fill="rgba(63,185,80,0.08)" stroke="#3fb950" stroke-width="1.4"/>
+    <text x="784" y="86" text-anchor="middle" font-size="13" font-weight="700" fill="#3fb950">real hardware</text>
+    <text x="784" y="103" text-anchor="middle" font-size="9" fill="#8b949e">USB-boot a real PC</text>
+  </g>
+
+  <!-- connectors -->
+  <g stroke="#3d444d" stroke-width="2">
+    <line x1="123" y1="90" x2="137" y2="90"/>
+    <line x1="319" y1="90" x2="333" y2="90"/>
+    <line x1="435" y1="90" x2="449" y2="90"/>
+    <line x1="557" y1="90" x2="571" y2="90"/>
+    <line x1="691" y1="90" x2="705" y2="90"/>
+  </g>
+  <g stroke="#22d3ee" stroke-width="2" stroke-dasharray="3 5" opacity="0.75">
+    <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1.4s" repeatCount="indefinite"/>
+    <line x1="123" y1="90" x2="137" y2="90"/>
+    <line x1="319" y1="90" x2="333" y2="90"/>
+    <line x1="435" y1="90" x2="449" y2="90"/>
+    <line x1="557" y1="90" x2="571" y2="90"/>
+    <line x1="691" y1="90" x2="705" y2="90"/>
+  </g>
+  <g fill="#8b949e">
+    <polygon points="137,85.5 143,90 137,94.5"/>
+    <polygon points="333,85.5 339,90 333,94.5"/>
+    <polygon points="449,85.5 455,90 449,94.5"/>
+    <polygon points="571,85.5 577,90 571,94.5"/>
+    <polygon points="705,85.5 711,90 705,94.5"/>
+  </g>
+
+  <text x="440" y="154" text-anchor="middle" font-size="12" fill="#8b949e" font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace">user programs compile the same way — MORT OS loads them from MortFS and runs them via int 0x80 syscalls</text>
+</svg>

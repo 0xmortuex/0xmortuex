@@ -1,30 +1,26 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=190&section=header&text=Fadi%20%C2%B7%200xmortuex&fontSize=48&fontColor=ffffff&animation=fadeIn&desc=compilers%20%C2%B7%20kernels%20%C2%B7%20browsers%20%C2%B7%20security%20tools&descSize=18&descAlignY=62" alt="banner" />
+<a href="https://0xmortuex.github.io">
+  <img src="assets/hero.svg" width="880" alt="Fadi · 0xmortuex — 9th grade, Istanbul. I build compilers, kernels, browsers and security tools. mort: my programming language. mortos: an OS kernel written in Mort that boots on real hardware. vex: a desktop browser with a built-in AI agent." />
+</a>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&center=true&vCenter=true&width=620&lines=I+built+a+programming+language...;...then+wrote+an+OS+kernel+in+it.;I+ship+a+desktop+browser+with+an+AI+agent.;Cybersecurity+%C2%B7+OSINT+%C2%B7+AI+tools;9th+grader+%E2%80%94+Istanbul+%F0%9F%87%B9%F0%9F%87%B7" alt="typing intro" />
+<br/><br/>
 
-<br/>
-
-[![Portfolio](https://img.shields.io/badge/🖥️_mortuexOS-boot_my_portfolio-2c5364?style=for-the-badge)](https://0xmortuex.github.io)
-[![Vex](https://img.shields.io/badge/⬇_Vex_Browser-download-47848F?style=for-the-badge&logo=electron&logoColor=white)](https://0xmortuex.github.io/vex-website/)
-![Profile views](https://komarev.com/ghpvc/?username=0xmortuex&color=2c5364&style=for-the-badge)
+<a href="https://0xmortuex.github.io"><b>🖥&nbsp;boot mortuexOS</b></a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://0xmortuex.github.io/vex-website/"><b>⬇&nbsp;download Vex</b></a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://github.com/0xmortuex/Mort"><b>λ&nbsp;Mort</b></a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="https://github.com/0xmortuex/MortOS"><b>💾&nbsp;MORT OS</b></a>
 
 </div>
 
----
+<br/>
 
-# 🏆 Flagships
+## The Mort stack — I built a language, then wrote an OS in it
 
-*My strongest work, best first.*
-
-## 1 · [Mort](https://github.com/0xmortuex/Mort) — my own programming language
+Most people learn a programming language. I wanted to know what's *underneath* — so I built **[Mort](https://github.com/0xmortuex/Mort)**: a statically-typed language whose entire compiler — lexer, parser, type checker, C code generator — is written from scratch in Python with **zero libraries**. Mort exists for one reason: **[MORT OS](https://github.com/0xmortuex/MortOS)**, an operating system written in it. Why does Mort compile to C instead of running on an interpreter? **Because an interpreter can't boot.**
 
 [![CI](https://github.com/0xmortuex/Mort/actions/workflows/ci.yml/badge.svg)](https://github.com/0xmortuex/Mort/actions/workflows/ci.yml)
 ![tests](https://img.shields.io/badge/tests-101%20passing-brightgreen)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 
-**Mort** is a statically-typed programming language that compiles to C. The whole compiler — lexer, parser, type checker, C code generator — is written from scratch in Python with **zero libraries**. Pointers, structs, fixed-width integers, and a freestanding mode that emits bare-metal C — because Mort exists for a bigger goal ↓
+<img src="assets/pipeline.svg" width="880" alt="Toolchain: hello.mort → mortc (my compiler, zero deps) → freestanding C → zig cc 32-bit cross-compile → mortos.iso (Limine BIOS/UEFI) → real hardware. User programs compile the same way and run via int 0x80 syscalls." />
 
 ```rust
 fn fib(n: int) -> int {
@@ -33,40 +29,48 @@ fn fib(n: int) -> int {
 }
 ```
 
-## 2 · [MORT OS](https://github.com/0xmortuex/MortOS) — an operating system written in Mort
+What the kernel does today:
 
-The reason the language exists: **an OS kernel written in my own language.** It boots on QEMU *and real hardware* (BIOS/UEFI bootable ISO you can write to a USB stick) — 32-bit protected mode, a GDT/IDT with remapped PICs, interrupt-driven keyboard input, a PIT timer, CPU exception handlers, and an interactive shell with command history. Why does Mort compile to C instead of running on an interpreter? **Because an interpreter can't boot.**
+- **Boots real machines, not just QEMU** — Limine BIOS/UEFI hybrid ISO; write it to a USB stick and it boots a real PC in 32-bit protected mode
+- **Drives real hardware** — interrupt-driven PS/2 keyboard, PIT timer, ATA PIO disk driver, framebuffer graphics with VGA text fallback
+- **Has its own filesystem** — MortFS, persistent across reboots: `ls` · `cat` · `write` · `rm` · `run`
+- **Runs user programs** — Mort programs compiled to flat binaries talk to the kernel through `int 0x80` syscalls, interactive keyboard input included
+- **Has a desktop** — a window manager with tab switching and built-in terminal, file manager, and browser apps
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/0xmortuex/MortOS/main/docs/mortos.png" alt="MORT OS booted in QEMU" width="640" />
-<br/><sub>MORT OS in QEMU — the shell, keyboard driver, and command parser are all written in Mort.</sub>
+
+<a href="https://github.com/0xmortuex/MortOS"><img src="https://raw.githubusercontent.com/0xmortuex/MortOS/main/docs/desktop.png" width="720" alt="MORT OS desktop running its terminal app — startup script loaded from disk, filesystem commands, graphics mode" /></a>
+
+<sub>MORT OS — the shell, drivers, filesystem, and window manager are all written in Mort.</sub>
+
 </div>
 
-## 3 · [Vex](https://github.com/0xmortuex/Vex) — a desktop browser built just for you
+## Vex — a browser I actually ship
 
-A fast, private, minimal **Electron browser** I actually ship — versioned releases, changelog, self-hosting docs, the whole thing. Arc-style vertical tabs and tab groups, a `Ctrl+K` command bar that does everything, ad & tracker blocking on by default, workspaces, tab sleep, split screen — and a **built-in AI agent** that can summarize pages, answer questions about what you're reading, and click/type to complete tasks, running on a local Ollama model or your own cloud worker.
+A fast, private, minimal **Electron browser** with versioned releases, a changelog, and self-hosting docs. Arc-style vertical tabs and tab groups, a `Ctrl+K` command bar that does everything, ad & tracker blocking on by default, workspaces, tab sleep, split screen — and a **built-in AI agent** that summarizes pages, answers questions about what you're reading, and can click and type to complete tasks, running on a local Ollama model or your own cloud worker.
+
+[![Latest release](https://img.shields.io/github/v/release/0xmortuex/Vex?style=for-the-badge&logo=electron&logoColor=white&color=47848F&label=Vex)](https://github.com/0xmortuex/Vex/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/0xmortuex/Vex/total?style=for-the-badge&color=2c5364&label=downloads)](https://github.com/0xmortuex/Vex/releases)
 
 **[⬇ Download for Windows](https://0xmortuex.github.io/vex-website/)** · [Latest release](https://github.com/0xmortuex/Vex/releases/latest) · [Self-hosting guide](https://github.com/0xmortuex/Vex/blob/main/SELF_HOSTING.md)
 
-## 4 · [mortuexOS](https://0xmortuex.github.io) — my portfolio is a desktop OS
+## mortuexOS — a portfolio you boot
 
-Instead of a portfolio page, I built a **fully interactive desktop operating system in the browser** — windows, a taskbar, apps. Every project below runs as a demo you can open from it. [Boot it.](https://0xmortuex.github.io)
+Instead of a portfolio page, I built a **desktop operating system in the browser** — windows, a taskbar, apps. Every web project below runs as a demo you can open inside it. **[Boot it →](https://0xmortuex.github.io)**
 
----
-
-## 🥇 Standouts
-
-The next tier — each one solves a real problem end to end:
+## Selected work
 
 | | Project | Why it matters |
 |---|---------|----------------|
 | 🔍 | [**ReconX**](https://github.com/0xmortuex/ReconX) · [demo](https://0xmortuex.github.io/ReconX/) | Full-spectrum domain recon in one dashboard — DNS, WHOIS, SSL, headers, tech stack, subdomains |
-| 🔑 | [**PassCrack**](https://github.com/0xmortuex/PassCrack) · [demo](https://0xmortuex.github.io/PassCrack/) | Password analyzer that simulates real attack techniques — crack times, pattern detection, l33t decoding, entropy. 100% in-browser, zero data transmitted |
+| 🔑 | [**PassCrack**](https://github.com/0xmortuex/PassCrack) · [demo](https://0xmortuex.github.io/PassCrack/) | Password analyzer that simulates real attack techniques — crack times, pattern detection, entropy. 100% in-browser, zero data transmitted |
 | 🛡️ | [**Roblox Anticheat: The Hard Way**](https://github.com/0xmortuex/roblox-anticheat-the-hard-way) | A written-from-scratch, production-grade server-side anticheat — every line explained, built as a teaching resource |
 | 🧩 | [**RoSuite**](https://github.com/0xmortuex/RoSuite) | Free RoPro alternative as a Chrome extension — server browser, player info, trade calculator, game stats |
 | 🖥️ | [**MiniOS**](https://github.com/0xmortuex/MiniOS) · [demo](https://0xmortuex.github.io/MiniOS/) | The browser-OS experiment that grew into mortuexOS |
 
-## 🔒 Cybersecurity & OSINT
+<details>
+<summary><b>🔒 Security & OSINT</b> — 3 more projects</summary>
+<br/>
 
 | Project | Description | Live Demo |
 |---------|-------------|-----------|
@@ -74,7 +78,11 @@ The next tier — each one solves a real problem end to end:
 | [**CipherLab**](https://github.com/0xmortuex/CipherLab) | Encryption playground — 13 ciphers with visual step-by-step breakdowns | [Demo](https://0xmortuex.github.io/CipherLab/) |
 | [**CodeLens**](https://github.com/0xmortuex/CodeLens) | AI-powered code security auditor with quality scoring | [Demo](https://0xmortuex.github.io/CodeLens/) |
 
-## 🤖 AI-Powered Tools
+</details>
+
+<details>
+<summary><b>🤖 AI-powered tools</b> — 6 more projects</summary>
+<br/>
 
 | Project | Description | Live Demo |
 |---------|-------------|-----------|
@@ -85,7 +93,11 @@ The next tier — each one solves a real problem end to end:
 | [**DebateBot**](https://github.com/0xmortuex/DebateBot) | Dual-side AI debate analysis with evidence and rebuttals | [Demo](https://0xmortuex.github.io/DebateBot/) |
 | [**LexScope**](https://github.com/0xmortuex/LexScope) | Interactive legislation explorer with AI suggestions | [Demo](https://0xmortuex.github.io/LexScope/) |
 
-## 🛠️ Tools, Apps & Plugins
+</details>
+
+<details>
+<summary><b>🛠 Apps, games & plugins</b> — 6 more projects</summary>
+<br/>
 
 | Project | Description | Live Demo |
 |---------|-------------|-----------|
@@ -96,26 +108,26 @@ The next tier — each one solves a real problem end to end:
 | [**steamogames**](https://github.com/0xmortuex/steamogames) | Live Steam player statistics — concurrent players, peaks, and trends | — |
 | **Vencord plugins** | [InactivityTracker](https://github.com/0xmortuex/vencord-inactivitytracker) · [QuickNotes](https://github.com/0xmortuex/vencord-quicknotes) · [RoleMembers](https://github.com/0xmortuex/vencord-rolemembers) · ServerClock · DMOrganizer | — |
 
----
+</details>
 
-## ⚙️ Tech I use
+<br/>
+
+## Stack
 
 <div align="center">
 
+![Mort](https://img.shields.io/badge/Mort-my_own_language-22d3ee?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Electron](https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white)
 ![Cloudflare Workers](https://img.shields.io/badge/Cloudflare_Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![D3.js](https://img.shields.io/badge/D3.js-F9A03C?style=for-the-badge&logo=d3dotjs&logoColor=white)
-![Chrome Extensions](https://img.shields.io/badge/Chrome_Extensions-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
 ![QEMU](https://img.shields.io/badge/QEMU-FF6600?style=for-the-badge&logo=qemu&logoColor=white)
 
 </div>
 
-## 📊 Stats
+## Stats
 
 <div align="center">
 
@@ -128,15 +140,9 @@ The next tier — each one solves a real problem end to end:
   <img src="https://raw.githubusercontent.com/0xmortuex/0xmortuex/main/generated/languages-light.svg" height="165" alt="Top languages" />
 </picture>
 
-<img src="https://streak-stats.demolab.com?user=0xmortuex&theme=transparent&hide_border=true" height="165" alt="Streak" />
+<sub>No third-party stats services anywhere on this page — the cards above are generated by [a workflow in this repo](.github/workflows/stats.yml), and the banner &amp; toolchain diagrams are hand-written SVGs.</sub>
 
-<sub>The stat cards above are self-generated by [a workflow in this repo](.github/workflows/stats.yml) — no third-party stats service.</sub>
-
-</div>
-
-## 🐍 Contribution snake
-
-<div align="center">
+<br/><br/>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/0xmortuex/0xmortuex/output/github-contribution-grid-snake-dark.svg" />
@@ -149,8 +155,6 @@ The next tier — each one solves a real problem end to end:
 
 <div align="center">
 
-*All web projects are open source and live on GitHub Pages. Not sure where to start? Boot [mortuexOS](https://0xmortuex.github.io).*
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=100&section=footer" alt="footer" />
+<sub>Every web project above is open source and live on GitHub Pages. Not sure where to start? <a href="https://0xmortuex.github.io"><b>Boot mortuexOS.</b></a></sub>
 
 </div>
