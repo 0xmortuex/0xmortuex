@@ -45,7 +45,7 @@ fn fib(n: int) -> int {
 
 </div>
 
-> ✅ **[mortnet](https://github.com/0xmortuex/mortnet) is complete** — a TCP/IP stack for MORT OS, written from scratch in Mort. NIC driver → ARP → IPv4 → ICMP → UDP → DHCP → DNS → TCP → HTTP, every layer built and verified in QEMU. **MORT OS now runs a web server** and [serves a page over its own stack](https://github.com/0xmortuex/mortnet#readme): a web server written in Mort, on an OS written in Mort, over a TCP/IP stack written in Mort.
+> ✅ **[mortnet](https://github.com/0xmortuex/mortnet) is complete** — a TCP/IP stack for MORT OS, written from scratch in Mort. NIC driver → ARP → IPv4 → ICMP → UDP → DHCP → DNS → TCP → HTTP, every layer built and verified in QEMU. It's **vendored into [MORT OS](https://github.com/0xmortuex/MortOS)** and boots from a USB stick: type `net` to lease an IP over DHCP, `httpd` to [serve a page](https://github.com/0xmortuex/mortnet#readme) — a web server written in Mort, on an OS written in Mort, over a TCP/IP stack written in Mort.
 
 ## Vex — a browser I actually ship
 
