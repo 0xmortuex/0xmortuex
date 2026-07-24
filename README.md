@@ -16,8 +16,10 @@
 
 Most people learn a programming language. I wanted to know what's *underneath* — so I built **[Mort](https://github.com/0xmortuex/Mort)**: a statically-typed language whose entire compiler — lexer, parser, type checker, C code generator — is written from scratch in Python with **zero libraries**. Mort exists for one reason: **[MORT OS](https://github.com/0xmortuex/MortOS)**, an operating system written in it. Why does Mort compile to C instead of running on an interpreter? **Because an interpreter can't boot.**
 
+At v0.40 Mort is no toy: it has a **versioned normative language specification** and a black-box conformance suite, move-only **resources with compile-time ownership checking**, generics, threads and atomics, and a standard library that speaks **TCP/UDP/DNS, bounded HTTP/1.1, RFC 6455 WebSockets, and the OS CSPRNG** — every release gated by 321 regression tests, adversarial fuzzing, and sanitizer runs across Windows, Linux, and macOS.
+
 [![CI](https://github.com/0xmortuex/Mort/actions/workflows/ci.yml/badge.svg)](https://github.com/0xmortuex/Mort/actions/workflows/ci.yml)
-![tests](https://img.shields.io/badge/tests-101%20passing-brightgreen)
+![tests](https://img.shields.io/badge/tests-321%20passing-brightgreen)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 
 <img src="assets/pipeline.svg" width="880" alt="Toolchain: hello.mort → mortc (my compiler, zero deps) → freestanding C → zig cc 32-bit cross-compile → mortos.iso (Limine BIOS/UEFI) → real hardware. User programs compile the same way and run via int 0x80 syscalls." />
@@ -32,10 +34,12 @@ fn fib(n: int) -> int {
 ### <img src="assets/icon-mortos.svg" width="22" height="22" align="top" alt="" /> MORT OS — what the kernel does today
 
 - **Boots real machines, not just QEMU** — Limine BIOS/UEFI hybrid ISO; write it to a USB stick and it boots a real PC in 32-bit protected mode
-- **Drives real hardware** — interrupt-driven PS/2 keyboard, PIT timer, ATA PIO disk driver, framebuffer graphics with VGA text fallback
-- **Has its own filesystem** — MortFS, persistent across reboots: `ls` · `cat` · `write` · `rm` · `run`
-- **Runs user programs** — Mort programs compiled to flat binaries talk to the kernel through `int 0x80` syscalls, interactive keyboard input included
-- **Has a desktop** — a window manager with tab switching and built-in terminal, file manager, and browser apps
+- **Drives real hardware** — interrupt-driven PS/2 keyboard, PIT timer, ATA PIO disk driver, framebuffer graphics with VGA text fallback, plus UHCI **USB enumeration** and **AC'97 audio** ([the reusable drivers have their own repo](https://github.com/0xmortuex/MortHardware))
+- **Has its own filesystem** — MortFS v2, persistent across reboots, now **hierarchical**: directories, `/bin` `/etc` `/home` `/var`, per-file ownership, Unix permission bits, and modification times
+- **Has users and `sudo`** — accounts with hashed passwords, enforced write permissions, `su`/`sudo`/`passwd`/`chmod`/`chown`, and a lock screen backed by the real account password
+- **Runs user programs** — Mort programs compiled to flat binaries talk to the kernel through `int 0x80` syscalls, interactive keyboard input included — and the shell finds them **by name via `$PATH`**
+- **Has a real shell** — a working directory with a path-aware prompt, environment variables with `$VAR` expansion (`export` · `env` · `unset`), and command history
+- **Has a desktop** — a keyboard-driven **home launcher** with app icons, plus Terminal, Files, browser, and **Settings** apps on `F1`–`F4`
 
 <div align="center">
 
@@ -46,6 +50,16 @@ fn fib(n: int) -> int {
 </div>
 
 > ✅ **[mortnet](https://github.com/0xmortuex/mortnet) is complete** — a TCP/IP stack for MORT OS, written from scratch in Mort. NIC driver → ARP → IPv4 → ICMP → UDP → DHCP → DNS → TCP → HTTP, every layer built and verified in QEMU. It's **vendored into [MORT OS](https://github.com/0xmortuex/MortOS)** and boots from a USB stick: type `net` to lease an IP over DHCP, `httpd` to [serve a page](https://github.com/0xmortuex/mortnet#readme) — a web server written in Mort, on an OS written in Mort, over a TCP/IP stack written in Mort.
+
+**The Mort stack is now five repos**, one per layer of the system:
+
+| | Repo | What it is |
+|---|------|------------|
+| λ | [**Mort**](https://github.com/0xmortuex/Mort) | The language — compiler, spec, conformance suite, and standard library |
+| 💾 | [**MortOS**](https://github.com/0xmortuex/MortOS) | The OS — desktop, users, filesystem, syscalls, networking, all in Mort |
+| 🌐 | [**mortnet**](https://github.com/0xmortuex/mortnet) | The TCP/IP stack — ARP to HTTP, from scratch, vendored into the kernel |
+| 🔌 | [**MortHardware**](https://github.com/0xmortuex/MortHardware) | Reusable bare-metal drivers — PCI, RTL8139 Ethernet, AC'97 audio, UHCI USB + HID, PC speaker — with porting docs and test recipes |
+| 📦 | [**mort-repo**](https://github.com/0xmortuex/mort-repo) | The package registry for `mpkg`, MORT OS's package manager — apt for an OS written from scratch |
 
 ## Vex — a browser I actually ship
 
