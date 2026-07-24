@@ -82,6 +82,7 @@ Paste notes, upload a PDF, snap a photo (OCR in English **and** Turkish), drop a
 
 | | Project | Why it matters |
 |---|---------|----------------|
+| 🕹️ | [**qemu-mcp**](https://github.com/0xmortuex/qemu-mcp) | MCP server that gives AI agents hands on a QEMU VM — boot an ISO or a bare kernel, press keys, screenshot the framebuffer, read serial. No SSH, no guest agent; born from the MORT OS dev loop |
 | 🔍 | [**ReconX**](https://github.com/0xmortuex/ReconX) · [demo](https://0xmortuex.github.io/ReconX/) | Full-spectrum domain recon in one dashboard — DNS, WHOIS, SSL, headers, tech stack, subdomains |
 | 🔑 | [**PassCrack**](https://github.com/0xmortuex/PassCrack) · [demo](https://0xmortuex.github.io/PassCrack/) | Password analyzer that simulates real attack techniques — crack times, pattern detection, entropy. 100% in-browser, zero data transmitted |
 | 🛡️ | [**Roblox Anticheat: The Hard Way**](https://github.com/0xmortuex/roblox-anticheat-the-hard-way) | A written-from-scratch, production-grade server-side anticheat — every line explained, built as a teaching resource |
