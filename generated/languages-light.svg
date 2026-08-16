@@ -8,8 +8,8 @@
   <text x="388.0" y="73" font-size="11" fill="#59636e" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">51%</text>
   <circle cx="38" cy="91" r="4" fill="#2a78d6"/>
   <text x="50" y="95" font-size="12" fill="#1f2328" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">Python</text>
-  <path d="M150 86 h64.9 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-64.9 z" fill="#2a78d6"/>
-  <text x="226.9" y="95" font-size="11" fill="#59636e" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">15%</text>
+  <path d="M150 86 h65.2 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-65.2 z" fill="#2a78d6"/>
+  <text x="227.2" y="95" font-size="11" fill="#59636e" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">15%</text>
   <circle cx="38" cy="113" r="4" fill="#4a3aa7"/>
   <text x="50" y="117" font-size="12" fill="#1f2328" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">CSS</text>
   <path d="M150 108 h59.2 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-59.2 z" fill="#4a3aa7"/>
