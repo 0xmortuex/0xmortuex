@@ -8,22 +8,22 @@
   <text x="388.0" y="73" font-size="11" fill="#9198a1" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">52%</text>
   <circle cx="38" cy="91" r="4" fill="#3987e5"/>
   <text x="50" y="95" font-size="12" fill="#e6edf3" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">Python</text>
-  <path d="M150 86 h62.1 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-62.1 z" fill="#3987e5"/>
-  <text x="224.1" y="95" font-size="11" fill="#9198a1" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">15%</text>
+  <path d="M150 86 h61.4 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-61.4 z" fill="#3987e5"/>
+  <text x="223.4" y="95" font-size="11" fill="#9198a1" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">15%</text>
   <circle cx="38" cy="113" r="4" fill="#9085e9"/>
   <text x="50" y="117" font-size="12" fill="#e6edf3" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">CSS</text>
-  <path d="M150 108 h55.2 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-55.2 z" fill="#9085e9"/>
-  <text x="217.2" y="117" font-size="11" fill="#9198a1" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">13%</text>
+  <path d="M150 108 h54.3 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-54.3 z" fill="#9085e9"/>
+  <text x="216.3" y="117" font-size="11" fill="#9198a1" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">13%</text>
   <circle cx="38" cy="135" r="4" fill="#d95926"/>
   <text x="50" y="139" font-size="12" fill="#e6edf3" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">HTML</text>
-  <path d="M150 130 h26.2 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-26.2 z" fill="#d95926"/>
-  <text x="188.2" y="139" font-size="11" fill="#9198a1" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">6.8%</text>
+  <path d="M150 130 h25.8 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-25.8 z" fill="#d95926"/>
+  <text x="187.8" y="139" font-size="11" fill="#9198a1" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">6.8%</text>
   <circle cx="38" cy="157" r="4" fill="#818b98"/>
   <text x="50" y="161" font-size="12" fill="#e6edf3" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">C#</text>
-  <path d="M150 152 h22.4 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-22.4 z" fill="#818b98"/>
-  <text x="184.4" y="161" font-size="11" fill="#9198a1" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">6.0%</text>
+  <path d="M150 152 h22.0 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-22.0 z" fill="#818b98"/>
+  <text x="184.0" y="161" font-size="11" fill="#9198a1" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">5.9%</text>
   <circle cx="38" cy="179" r="4" fill="#1ba3c7"/>
   <text x="50" y="183" font-size="12" fill="#e6edf3" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">TypeScript</text>
-  <path d="M150 174 h21.8 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-21.8 z" fill="#1ba3c7"/>
-  <text x="183.8" y="183" font-size="11" fill="#9198a1" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">5.8%</text>
+  <path d="M150 174 h21.4 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-21.4 z" fill="#1ba3c7"/>
+  <text x="183.4" y="183" font-size="11" fill="#9198a1" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">5.8%</text>
 </svg>
