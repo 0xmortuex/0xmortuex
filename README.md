@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://0xmortuex.github.io">
-  <img src="assets/hero.svg" width="880" alt="Fadi · 0xmortuex — 9th grade, Istanbul. I build compilers, kernels, browsers and security tools. mort: my programming language. mortos: an OS kernel written in Mort that boots on real hardware. vex: a desktop browser with a built-in AI agent. flashmind: an AI study engine with OCR and FSRS spaced repetition." />
+  <img src="assets/hero.svg" width="880" alt="Fadi · 0xmortuex — 10th grade, Istanbul. I build compilers, kernels, browsers and security tools. mort: my programming language. mortos: an OS kernel written in Mort that boots on real hardware. vex: a desktop browser with a built-in AI agent. flashmind: an AI study engine with OCR and FSRS spaced repetition." />
 </a>
 
 <br/><br/>
