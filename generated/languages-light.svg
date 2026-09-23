@@ -20,8 +20,8 @@
   <text x="188.6" y="139" font-size="11" fill="#59636e" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">7.7%</text>
   <circle cx="38" cy="157" r="4" fill="#2a78d6"/>
   <text x="50" y="161" font-size="12" fill="#1f2328" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">Python</text>
-  <path d="M150 152 h25.1 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-25.1 z" fill="#2a78d6"/>
-  <text x="187.1" y="161" font-size="11" fill="#59636e" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">7.3%</text>
+  <path d="M150 152 h25.2 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-25.2 z" fill="#2a78d6"/>
+  <text x="187.2" y="161" font-size="11" fill="#59636e" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">7.4%</text>
   <circle cx="38" cy="179" r="4" fill="#eb6834"/>
   <text x="50" y="183" font-size="12" fill="#1f2328" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">HTML</text>
   <path d="M150 174 h10.1 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-10.1 z" fill="#eb6834"/>
