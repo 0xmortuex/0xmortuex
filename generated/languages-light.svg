@@ -13,7 +13,7 @@
   <circle cx="38" cy="113" r="4" fill="#2a78d6"/>
   <text x="50" y="117" font-size="12" fill="#1f2328" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">Python</text>
   <path d="M150 108 h31.3 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-31.3 z" fill="#2a78d6"/>
-  <text x="193.3" y="117" font-size="11" fill="#59636e" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">9.8%</text>
+  <text x="193.3" y="117" font-size="11" fill="#59636e" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">9.9%</text>
   <circle cx="38" cy="135" r="4" fill="#4a3aa7"/>
   <text x="50" y="139" font-size="12" fill="#1f2328" font-family="system-ui,-apple-system,'Segoe UI',sans-serif">CSS</text>
   <path d="M150 130 h17.8 a4 4 0 0 1 4 4 v2.0 a4 4 0 0 1 -4 4 h-17.8 z" fill="#4a3aa7"/>
