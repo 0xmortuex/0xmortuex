@@ -1,68 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="354" viewBox="0 0 880 354" role="img" aria-label="Fadi, 0xmortuex — 9th grade, Istanbul. Builds compilers, kernels, browsers and security tools. Mort: a programming language written from scratch. MORT OS: an OS kernel written in Mort that boots on real hardware. Vex: a desktop browser with a built-in AI agent. FlashMind: an AI study engine with OCR and spaced repetition.">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="330" viewBox="0 0 880 330" role="img" aria-label="Fadi (0xmortuex), 10th grade, Istanbul. I build the whole stack, compiler to agent: a language (Mort), an OS written in it (MORT OS), a TCP/IP stack for it (mortnet), and 13 MCP servers that let AI agents boot, debug and read hardware.">
   <defs>
-    <linearGradient id="name-g" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#22d3ee"/>
-      <stop offset="1" stop-color="#34d399"/>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a78bfa"/><stop offset="0.55" stop-color="#22d3ee"/><stop offset="1" stop-color="#34d399"/>
     </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#ffffff" fill-opacity="0.05"/>
+    </pattern>
+    <radialGradient id="glow" cx="0.82" cy="0.1" r="0.7">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.20"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.05" cy="1" r="0.6">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.12"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-
-  <!-- terminal card -->
-  <rect x="0.5" y="0.5" width="879" height="353" rx="12" fill="#0d1117" stroke="#30363d"/>
-  <circle cx="26" cy="19" r="6" fill="#ff5f57"/>
-  <circle cx="46" cy="19" r="6" fill="#febc2e"/>
-  <circle cx="66" cy="19" r="6" fill="#28c840"/>
-  <text x="440" y="23" text-anchor="middle" font-size="12" fill="#8b949e" font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace">fadi@0xmortuex : ~</text>
-  <line x1="1" y1="37.5" x2="879" y2="37.5" stroke="#30363d" stroke-opacity="0.6"/>
-
-  <!-- $ whoami -->
-  <text x="28" y="78" font-size="15" font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace" xml:space="preserve"><tspan fill="#3fb950">$</tspan><tspan fill="#e6edf3"> whoami</tspan>
-    <animate attributeName="opacity" to="0" dur="0.001s" begin="0s" fill="freeze"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="0.4s" fill="freeze"/>
-  </text>
-
-  <!-- big name -->
-  <text x="26" y="130" font-size="44" font-weight="700" fill="url(#name-g)" font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace">0xmortuex
-    <animate attributeName="opacity" to="0" dur="0.001s" begin="0s" fill="freeze"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.8s" fill="freeze"/>
-  </text>
-  <text x="28" y="158" font-size="14.5" fill="#9198a1" font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace">Fadi · 9th grade · Istanbul — I build compilers, kernels, browsers &amp; security tools
-    <animate attributeName="opacity" to="0" dur="0.001s" begin="0s" fill="freeze"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.1s" fill="freeze"/>
-  </text>
-
-  <!-- boot sequence -->
-  <text x="28" y="198" font-size="15" font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace" xml:space="preserve"><tspan fill="#3fb950">$</tspan><tspan fill="#e6edf3"> ./mortuex --boot</tspan>
-    <animate attributeName="opacity" to="0" dur="0.001s" begin="0s" fill="freeze"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="1.7s" fill="freeze"/>
-  </text>
-
-  <text x="28" y="226" font-size="14" font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace" xml:space="preserve"><tspan fill="#3fb950" font-weight="700">[ OK ]</tspan><tspan fill="#22d3ee" font-weight="700">  mort       </tspan><tspan fill="#c9d1d9">— my programming language · compiles to C · 101 tests passing</tspan>
-    <animate attributeName="opacity" to="0" dur="0.001s" begin="0s" fill="freeze"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="2.2s" fill="freeze"/>
-  </text>
-  <text x="28" y="250" font-size="14" font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace" xml:space="preserve"><tspan fill="#3fb950" font-weight="700">[ OK ]</tspan><tspan fill="#22d3ee" font-weight="700">  mortos     </tspan><tspan fill="#c9d1d9">— an OS kernel written in Mort · boots on real hardware</tspan>
-    <animate attributeName="opacity" to="0" dur="0.001s" begin="0s" fill="freeze"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="2.6s" fill="freeze"/>
-  </text>
-  <text x="28" y="274" font-size="14" font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace" xml:space="preserve"><tspan fill="#3fb950" font-weight="700">[ OK ]</tspan><tspan fill="#22d3ee" font-weight="700">  vex        </tspan><tspan fill="#c9d1d9">— a desktop browser with a built-in AI agent · shipping</tspan>
-    <animate attributeName="opacity" to="0" dur="0.001s" begin="0s" fill="freeze"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="3.0s" fill="freeze"/>
-  </text>
-  <text x="28" y="298" font-size="14" font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace" xml:space="preserve"><tspan fill="#3fb950" font-weight="700">[ OK ]</tspan><tspan fill="#22d3ee" font-weight="700">  flashmind  </tspan><tspan fill="#c9d1d9">— AI study engine · OCR, FSRS spaced repetition, exams</tspan>
-    <animate attributeName="opacity" to="0" dur="0.001s" begin="0s" fill="freeze"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="3.4s" fill="freeze"/>
-  </text>
-
-  <!-- ready line + cursor -->
-  <text x="28" y="330" font-size="14" fill="#8b949e" font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace">boot complete — scroll for the full tour
-    <animate attributeName="opacity" to="0" dur="0.001s" begin="0s" fill="freeze"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="4.0s" fill="freeze"/>
-  </text>
-  <g>
-    <animate attributeName="opacity" to="0" dur="0.001s" begin="0s" fill="freeze"/>
-    <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="4.0s" fill="freeze"/>
-    <rect x="374" y="317" width="9" height="17" fill="#22d3ee">
-      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" begin="4.1s" repeatCount="indefinite"/>
-    </rect>
+  <rect x="0.5" y="0.5" width="879" height="329" rx="16" fill="#0a0d14" stroke="#232a3b"/>
+  <rect x="1" y="1" width="878" height="328" rx="16" fill="url(#dots)"/>
+  <rect x="1" y="1" width="878" height="328" rx="16" fill="url(#glow)"/>
+  <rect x="1" y="1" width="878" height="328" rx="16" fill="url(#glow2)"/>
+  <text x="40" y="58" font-size="12" letter-spacing="2.4" fill="#9aa3b5" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">FADI · 0XMORTUEX · ISTANBUL</text>
+  <rect x="40" y="76" width="118" height="24" rx="12" fill="#a78bfa" fill-opacity="0.12" stroke="#a78bfa" stroke-opacity="0.45"/>
+  <circle cx="55" cy="88" r="3.5" fill="#34d399"><animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite"/></circle>
+  <text x="66" y="92.5" font-size="11.5" fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">10th grade</text>
+  <text x="40" y="148" font-size="33" font-weight="800" fill="#eef1f7" letter-spacing="-0.8" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">I build the whole stack —</text>
+  <text x="40" y="190" font-size="33" font-weight="800" fill="url(#accent)" letter-spacing="-0.8" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">compiler to agent.</text>
+  <text x="40" y="236" font-size="15" fill="#9aa3b5" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">I wrote a language, an OS in it, a TCP/IP stack</text>
+  <text x="40" y="258" font-size="15" fill="#9aa3b5" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">for that OS — and the MCP servers that let AI</text>
+  <text x="40" y="280" font-size="15" fill="#9aa3b5" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">agents boot it, debug it, and read its hardware.</text>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="1.13s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 14" to="0 0" begin="1.13s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>
+    <rect x="530" y="44" width="318" height="44" rx="10" fill="#111623" stroke="#34d399" stroke-opacity="0.55"/>
+    <rect x="530" y="44" width="5" height="44" rx="2.5" fill="#34d399"/>
+    <text x="552" y="71.5" font-size="15" font-weight="700" fill="#eef1f7" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">13 MCP servers</text>
+    <text x="832" y="71" text-anchor="end" font-size="11.5" fill="#9aa3b5" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">boot · debug · decode</text>
+  </g>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="0.91s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 14" to="0 0" begin="0.91s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>
+    <rect x="530" y="97" width="318" height="44" rx="10" fill="#111623" stroke="#22d3ee" stroke-opacity="0.55"/>
+    <rect x="530" y="97" width="5" height="44" rx="2.5" fill="#22d3ee"/>
+    <text x="552" y="124.5" font-size="15" font-weight="700" fill="#eef1f7" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">Mort</text>
+    <text x="832" y="124" text-anchor="end" font-size="11.5" fill="#9aa3b5" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">my language → freestanding C</text>
+  </g>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="0.69s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 14" to="0 0" begin="0.69s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>
+    <rect x="530" y="150" width="318" height="44" rx="10" fill="#111623" stroke="#60a5fa" stroke-opacity="0.55"/>
+    <rect x="530" y="150" width="5" height="44" rx="2.5" fill="#60a5fa"/>
+    <text x="552" y="177.5" font-size="15" font-weight="700" fill="#eef1f7" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">mortnet</text>
+    <text x="832" y="177" text-anchor="end" font-size="11.5" fill="#9aa3b5" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">DHCP · DNS · TCP · HTTP</text>
+  </g>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="0.47s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 14" to="0 0" begin="0.47s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>
+    <rect x="530" y="203" width="318" height="44" rx="10" fill="#111623" stroke="#a78bfa" stroke-opacity="0.55"/>
+    <rect x="530" y="203" width="5" height="44" rx="2.5" fill="#a78bfa"/>
+    <text x="552" y="230.5" font-size="15" font-weight="700" fill="#eef1f7" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">MORT OS</text>
+    <text x="832" y="230" text-anchor="end" font-size="11.5" fill="#9aa3b5" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">kernel · desktop · MortFS</text>
+  </g>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="0.25s" dur="0.5s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 14" to="0 0" begin="0.25s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>
+    <rect x="530" y="256" width="318" height="44" rx="10" fill="#111623" stroke="#f472b6" stroke-opacity="0.55"/>
+    <rect x="530" y="256" width="5" height="44" rx="2.5" fill="#f472b6"/>
+    <text x="552" y="283.5" font-size="15" font-weight="700" fill="#eef1f7" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">real hardware</text>
+    <text x="832" y="283" text-anchor="end" font-size="11.5" fill="#9aa3b5" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">x86 · BIOS/UEFI · USB</text>
   </g>
 </svg>

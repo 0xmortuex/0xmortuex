@@ -1,63 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="182" viewBox="0 0 880 182" role="img" aria-label="The Mort toolchain: hello.mort source is compiled by mortc (my compiler, written from scratch with zero dependencies) to freestanding C, cross-compiled 32-bit with zig cc, packed into a Limine BIOS/UEFI ISO, and booted on real hardware. User programs compile the same way and run via int 0x80 syscalls.">
-  <rect x="0.5" y="0.5" width="879" height="181" rx="12" fill="#0d1117" stroke="#30363d"/>
-
-  <text x="28" y="36" font-size="13" fill="#8b949e" font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace">// how MORT OS gets built — from my language to bare metal</text>
-
-  <g font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace">
-    <!-- node 1: hello.mort -->
-    <rect x="24" y="64" width="96" height="52" rx="8" fill="#161b22" stroke="#30363d"/>
-    <text x="72" y="86" text-anchor="middle" font-size="12" font-weight="700" fill="#e6edf3">hello.mort</text>
-    <text x="72" y="103" text-anchor="middle" font-size="9" fill="#8b949e">Mort source</text>
-
-    <!-- node 2: mortc -->
-    <rect x="146" y="64" width="170" height="52" rx="8" fill="#161b22" stroke="#22d3ee" stroke-width="1.4"/>
-    <text x="231" y="86" text-anchor="middle" font-size="13" font-weight="700" fill="#22d3ee">mortc — my compiler</text>
-    <text x="231" y="103" text-anchor="middle" font-size="9" fill="#8b949e">written from scratch · 0 deps</text>
-
-    <!-- node 3: hello.c -->
-    <rect x="342" y="64" width="90" height="52" rx="8" fill="#161b22" stroke="#30363d"/>
-    <text x="387" y="86" text-anchor="middle" font-size="12" font-weight="700" fill="#e6edf3">hello.c</text>
-    <text x="387" y="103" text-anchor="middle" font-size="9" fill="#8b949e">freestanding</text>
-
-    <!-- node 4: zig cc -->
-    <rect x="458" y="64" width="96" height="52" rx="8" fill="#161b22" stroke="#30363d"/>
-    <text x="506" y="86" text-anchor="middle" font-size="12" font-weight="700" fill="#e6edf3">zig cc</text>
-    <text x="506" y="103" text-anchor="middle" font-size="9" fill="#8b949e">32-bit cross</text>
-
-    <!-- node 5: mortos.iso -->
-    <rect x="580" y="64" width="108" height="52" rx="8" fill="#161b22" stroke="#30363d"/>
-    <text x="634" y="86" text-anchor="middle" font-size="12" font-weight="700" fill="#e6edf3">mortos.iso</text>
-    <text x="634" y="103" text-anchor="middle" font-size="9" fill="#8b949e">limine BIOS/UEFI</text>
-
-    <!-- node 6: real hardware -->
-    <rect x="714" y="64" width="140" height="52" rx="8" fill="rgba(63,185,80,0.08)" stroke="#3fb950" stroke-width="1.4"/>
-    <text x="784" y="86" text-anchor="middle" font-size="13" font-weight="700" fill="#3fb950">real hardware</text>
-    <text x="784" y="103" text-anchor="middle" font-size="9" fill="#8b949e">USB-boot a real PC</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="250" viewBox="0 0 880 250" role="img" aria-label="Toolchain: hello.mx goes through mortc (my compiler) to freestanding C, then zig cc cross-compiles to i386, producing mortos.iso (Limine BIOS/UEFI) that boots a real PC from a USB stick. Inside the ISO, all in Mort: drivers, MortFS v2, users and sudo, a desktop with apps, the mortnet TCP/IP stack, int 0x80 syscalls. Dev loop: an AI agent boots it through qemu-mcp and debugs it through gdbstub-mcp.">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a78bfa"/><stop offset="0.55" stop-color="#22d3ee"/><stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#ffffff" fill-opacity="0.05"/>
+    </pattern>
+    <radialGradient id="glow" cx="0.82" cy="0.1" r="0.7">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.20"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.05" cy="1" r="0.6">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.12"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="879" height="249" rx="16" fill="#0a0d14" stroke="#232a3b"/>
+  <rect x="1" y="1" width="878" height="248" rx="16" fill="url(#dots)"/>
+  <rect x="1" y="1" width="878" height="248" rx="16" fill="url(#glow)"/>
+  <rect x="1" y="1" width="878" height="248" rx="16" fill="url(#glow2)"/>
+  <text x="32" y="40" font-size="11.5" letter-spacing="2" fill="#9aa3b5" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">TOOLCHAIN · ONE COMPILER BUILDS THE APPS AND THE KERNEL</text>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.15s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>
+    <rect x="32.0" y="60" width="122" height="58" rx="10" fill="#111623" stroke="#22d3ee" stroke-opacity="0.6"/>
+    <text x="93.0" y="86" text-anchor="middle" font-size="12.5" font-weight="700" fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">hello.mx</text>
+    <text x="93.0" y="104" text-anchor="middle" font-size="11" fill="#9aa3b5" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">source</text>
   </g>
-
-  <!-- connectors -->
-  <g stroke="#3d444d" stroke-width="2">
-    <line x1="123" y1="90" x2="137" y2="90"/>
-    <line x1="319" y1="90" x2="333" y2="90"/>
-    <line x1="435" y1="90" x2="449" y2="90"/>
-    <line x1="557" y1="90" x2="571" y2="90"/>
-    <line x1="691" y1="90" x2="705" y2="90"/>
+  <path d="M158.0 89.0 H161.8" stroke="#5d6678" stroke-width="1.5" stroke-dasharray="3 3"><animate attributeName="stroke-dashoffset" from="12" to="0" dur="0.8s" repeatCount="indefinite"/></path>
+  <path d="M160.8 85.0 L166.8 89.0 L160.8 93.0" fill="none" stroke="#5d6678" stroke-width="1.5"/>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="0.3s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.3s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>
+    <rect x="170.8" y="60" width="122" height="58" rx="10" fill="#111623" stroke="#22d3ee" stroke-opacity="0.6"/>
+    <text x="231.8" y="86" text-anchor="middle" font-size="12.5" font-weight="700" fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">mortc</text>
+    <text x="231.8" y="104" text-anchor="middle" font-size="11" fill="#9aa3b5" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">my compiler</text>
   </g>
-  <g stroke="#22d3ee" stroke-width="2" stroke-dasharray="3 5" opacity="0.75">
-    <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1.4s" repeatCount="indefinite"/>
-    <line x1="123" y1="90" x2="137" y2="90"/>
-    <line x1="319" y1="90" x2="333" y2="90"/>
-    <line x1="435" y1="90" x2="449" y2="90"/>
-    <line x1="557" y1="90" x2="571" y2="90"/>
-    <line x1="691" y1="90" x2="705" y2="90"/>
+  <path d="M296.8 89.0 H300.6" stroke="#5d6678" stroke-width="1.5" stroke-dasharray="3 3"><animate attributeName="stroke-dashoffset" from="12" to="0" dur="0.8s" repeatCount="indefinite"/></path>
+  <path d="M299.6 85.0 L305.6 89.0 L299.6 93.0" fill="none" stroke="#5d6678" stroke-width="1.5"/>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="0.44999999999999996s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.44999999999999996s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>
+    <rect x="309.6" y="60" width="122" height="58" rx="10" fill="#111623" stroke="#60a5fa" stroke-opacity="0.6"/>
+    <text x="370.6" y="86" text-anchor="middle" font-size="12.5" font-weight="700" fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">freestanding C</text>
+    <text x="370.6" y="104" text-anchor="middle" font-size="11" fill="#9aa3b5" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">no libc</text>
   </g>
-  <g fill="#8b949e">
-    <polygon points="137,85.5 143,90 137,94.5"/>
-    <polygon points="333,85.5 339,90 333,94.5"/>
-    <polygon points="449,85.5 455,90 449,94.5"/>
-    <polygon points="571,85.5 577,90 571,94.5"/>
-    <polygon points="705,85.5 711,90 705,94.5"/>
+  <path d="M435.6 89.0 H439.4" stroke="#5d6678" stroke-width="1.5" stroke-dasharray="3 3"><animate attributeName="stroke-dashoffset" from="12" to="0" dur="0.8s" repeatCount="indefinite"/></path>
+  <path d="M438.4 85.0 L444.4 89.0 L438.4 93.0" fill="none" stroke="#5d6678" stroke-width="1.5"/>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="0.6s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.6s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>
+    <rect x="448.4" y="60" width="122" height="58" rx="10" fill="#111623" stroke="#60a5fa" stroke-opacity="0.6"/>
+    <text x="509.4" y="86" text-anchor="middle" font-size="12.5" font-weight="700" fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">zig cc</text>
+    <text x="509.4" y="104" text-anchor="middle" font-size="11" fill="#9aa3b5" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">i386 cross</text>
   </g>
-
-  <text x="440" y="154" text-anchor="middle" font-size="12" fill="#8b949e" font-family="'Cascadia Code','SF Mono','Fira Code','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace">user programs compile the same way — MORT OS loads them from MortFS and runs them via int 0x80 syscalls</text>
+  <path d="M574.4 89.0 H578.2" stroke="#5d6678" stroke-width="1.5" stroke-dasharray="3 3"><animate attributeName="stroke-dashoffset" from="12" to="0" dur="0.8s" repeatCount="indefinite"/></path>
+  <path d="M577.2 85.0 L583.2 89.0 L577.2 93.0" fill="none" stroke="#5d6678" stroke-width="1.5"/>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="0.75s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.75s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>
+    <rect x="587.2" y="60" width="122" height="58" rx="10" fill="#111623" stroke="#a78bfa" stroke-opacity="0.6"/>
+    <text x="648.2" y="86" text-anchor="middle" font-size="12.5" font-weight="700" fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">mortos.iso</text>
+    <text x="648.2" y="104" text-anchor="middle" font-size="11" fill="#9aa3b5" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">Limine BIOS/UEFI</text>
+  </g>
+  <path d="M713.2 89.0 H717.0" stroke="#5d6678" stroke-width="1.5" stroke-dasharray="3 3"><animate attributeName="stroke-dashoffset" from="12" to="0" dur="0.8s" repeatCount="indefinite"/></path>
+  <path d="M716.0 85.0 L722.0 89.0 L716.0 93.0" fill="none" stroke="#5d6678" stroke-width="1.5"/>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.4s" fill="freeze"/><animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="0.9s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>
+    <rect x="726.0" y="60" width="122" height="58" rx="10" fill="#111623" stroke="#f472b6" stroke-opacity="0.6"/>
+    <text x="787.0" y="86" text-anchor="middle" font-size="12.5" font-weight="700" fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">real PC</text>
+    <text x="787.0" y="104" text-anchor="middle" font-size="11" fill="#9aa3b5" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">USB stick</text>
+  </g>
+  <text x="32" y="150" font-size="11.5" letter-spacing="2" fill="#9aa3b5" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">INSIDE THE ISO · ALL MORT</text>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="1.1s" dur="0.35s" fill="freeze"/><rect x="32.0" y="162" width="67.2" height="26" rx="13" fill="#a78bfa" fill-opacity="0.10" stroke="#a78bfa" stroke-opacity="0.4"/><text x="65.6" y="179.5" text-anchor="middle" font-size="12" fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">drivers</text></g>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="1.1800000000000002s" dur="0.35s" fill="freeze"/><rect x="107.2" y="162" width="82.4" height="26" rx="13" fill="#a78bfa" fill-opacity="0.10" stroke="#a78bfa" stroke-opacity="0.4"/><text x="148.4" y="179.5" text-anchor="middle" font-size="12" fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">MortFS v2</text></g>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="1.26s" dur="0.35s" fill="freeze"/><rect x="197.6" y="162" width="105.2" height="26" rx="13" fill="#a78bfa" fill-opacity="0.10" stroke="#a78bfa" stroke-opacity="0.4"/><text x="250.2" y="179.5" text-anchor="middle" font-size="12" fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">users + sudo</text></g>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="1.34s" dur="0.35s" fill="freeze"/><rect x="310.8" y="162" width="120.4" height="26" rx="13" fill="#a78bfa" fill-opacity="0.10" stroke="#a78bfa" stroke-opacity="0.4"/><text x="371.0" y="179.5" text-anchor="middle" font-size="12" fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">desktop + apps</text></g>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="1.4200000000000002s" dur="0.35s" fill="freeze"/><rect x="439.2" y="162" width="120.4" height="26" rx="13" fill="#a78bfa" fill-opacity="0.10" stroke="#a78bfa" stroke-opacity="0.4"/><text x="499.4" y="179.5" text-anchor="middle" font-size="12" fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">mortnet TCP/IP</text></g>
+  <g><set attributeName="opacity" to="0" begin="0s"/><animate attributeName="opacity" from="0" to="1" begin="1.5s" dur="0.35s" fill="freeze"/><rect x="567.6" y="162" width="143.2" height="26" rx="13" fill="#a78bfa" fill-opacity="0.10" stroke="#a78bfa" stroke-opacity="0.4"/><text x="639.2" y="179.5" text-anchor="middle" font-size="12" fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">int 0x80 syscalls</text></g>
+  <text x="32" y="218" font-size="13" fill="#9aa3b5" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif"><tspan fill="#34d399" font-weight="700">dev loop</tspan> — an AI agent boots the ISO through <tspan fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">qemu-mcp</tspan>, types into the shell and screenshots</text>
+  <text x="32" y="238" font-size="13" fill="#9aa3b5" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">the framebuffer, then steps the kernel through <tspan fill="#eef1f7" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">gdbstub-mcp</tspan>. No SSH, no guest agent.</text>
 </svg>
