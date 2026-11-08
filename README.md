@@ -383,6 +383,17 @@ Paste notes, upload a PDF, snap a photo (OCR in English **and** Turkish), record
 
 </div>
 
+## 💬 Say hi
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Discord-vesperhex-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord: vesperhex" />
+<a href="https://0xmortuex.github.io"><img src="https://img.shields.io/badge/Portfolio-mortuexOS-8b5cf6?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio: mortuexOS" /></a>
+
+<sub>Add <b>vesperhex</b> on Discord — happy to talk about compilers, kernels, MCP, or anything in this README.</sub>
+
+</div>
+
 ---
 
 <div align="center">
