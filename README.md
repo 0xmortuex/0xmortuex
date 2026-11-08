@@ -344,6 +344,7 @@ Paste notes, upload a PDF, snap a photo (OCR in English **and** Turkish), record
 <div align="center">
 
 ![Mort](https://img.shields.io/badge/Mort-my_own_language-8b5cf6?style=flat-square)
+[![Vex](https://img.shields.io/badge/Vex-my_second_language-22d3ee?style=flat-square)](https://github.com/0xmortuex/vex-lang)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black)
 ![x86](https://img.shields.io/badge/x86-bare_metal-555?style=flat-square)
