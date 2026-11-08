@@ -1,16 +1,16 @@
 <div align="center">
 
 <a href="https://0xmortuex.github.io">
-  <img src="assets/hero.svg" width="880" alt="Fadi (0xmortuex), 10th grade, Istanbul. I build the whole stack, compiler to agent: a language (Mort), an OS written in it (MORT OS), a TCP/IP stack for it (mortnet), and 13 MCP servers that let AI agents boot, debug and read hardware." />
+  <img src="assets/hero.svg" width="880" alt="Fadi (0xmortuex), 10th grade, Istanbul. I build the whole stack, compiler to agent: a language (Mort), an OS written in it (MORT OS), a TCP/IP stack for it (mortnet), and 43 MCP servers for AI agents, 13 of them for OS development." />
 </a>
 
 <br/>
 
-[**λ Mort**](https://github.com/0xmortuex/Mort) &nbsp;·&nbsp; [**💾 MORT OS**](https://github.com/0xmortuex/MortOS) &nbsp;·&nbsp; [**🤖 OSdev MCP servers**](#-ai-agents-that-do-os-development) &nbsp;·&nbsp; [**⬇ Vex**](https://0xmortuex.github.io/vex-website/) &nbsp;·&nbsp; [**⚡ FlashMind**](https://0xmortuex.github.io/FlashMind/) &nbsp;·&nbsp; [**📚 Guides**](#-build-it-yourself--the-hard-way-guides)
+[**λ Mort**](https://github.com/0xmortuex/Mort) &nbsp;·&nbsp; [**💾 MORT OS**](https://github.com/0xmortuex/MortOS) &nbsp;·&nbsp; [**🤖 OSdev MCP**](#-ai-agents-that-do-os-development) &nbsp;·&nbsp; [**🧰 Dev MCP**](#-mcp-servers-for-everyday-dev-work) &nbsp;·&nbsp; [**⬇ Vex**](https://0xmortuex.github.io/vex-website/) &nbsp;·&nbsp; [**⚡ FlashMind**](https://0xmortuex.github.io/FlashMind/) &nbsp;·&nbsp; [**📚 Guides**](#-build-it-yourself--the-hard-way-guides)
 
 <br/>
 
-<img src="assets/numbers.svg" width="880" alt="1 language written from scratch, 1 operating system that boots real PCs, 13 MCP servers for OS-dev agents, 40+ Claude Code skills, 7 from-scratch guides." />
+<img src="assets/numbers.svg" width="880" alt="2 languages written from scratch, 1 operating system that boots real PCs, 43 MCP servers for AI agents, 46 Claude Code skills, 38 from-scratch guides." />
 
 </div>
 
@@ -18,9 +18,11 @@
 
 | | |
 |---|---|
-| 🤖 **A fleet of OSdev MCP servers** | 13 servers that let AI agents boot kernels in QEMU, rewind them, single-step them over the gdbstub, and decode ACPI tables, devicetrees, page tables and linker maps — [jump to them ↓](#-ai-agents-that-do-os-development) |
+| 🧰 **30 new MCP servers** | Everyday dev tools for AI agents — test runner, import-graph impact analysis, secret scanning, linters for GitHub Actions, Kubernetes, Dockerfiles, Terraform plans and OpenAPI, plus safe tools for spreadsheets, PDFs, archives and media. [See them ↓](#-mcp-servers-for-everyday-dev-work) |
+| 📚 **A "hard way" guide for every one** | Each new server ships with a companion guide that rebuilds it from an empty file — 38 guides in total |
+| λ **[vex-lang](https://github.com/0xmortuex/vex-lang)** | My second language: type inference, enums with exhaustive `match`, `Option`/`Result` with `?`, generics, and its own bytecode VM |
+| 🤖 **13 OSdev MCP servers** | Agents boot kernels in QEMU, rewind them, single-step over the gdbstub, and decode ACPI, devicetrees, page tables and linker maps — [jump to them ↓](#-ai-agents-that-do-os-development) |
 | 💾 **MORT OS grew up** | Users, permissions and `sudo`, a hierarchical **MortFS v2**, a home launcher and Settings app, a power menu with lock / sleep / restart / shutdown, and a live RTC clock |
-| 📚 **"The hard way" guides** | Build a TCP/IP stack, a kernel gdbstub, ACPI support, and an MCP server from an empty file — every chapter verified in real QEMU |
 | 🌐 **Vex profiles & import** | Side-by-side profiles with their own tabs, passwords and sync, plus importing from Chrome, Edge, Brave and Firefox |
 | ⚡ **FlashMind lecture mode** | Record a lecture in class and get a live transcript turned into notes, cards and exam alerts |
 | 📰 **[ai-news-tracker](https://github.com/0xmortuex/ai-news-tracker)** | Rebuilt as a serverless pipeline: a scheduled Action ingests ~75 sources, dedupes and clusters stories, and publishes JSON + Atom feeds that the Vex start page reads |
@@ -87,13 +89,14 @@ fn main() -> int {
 
 </div>
 
-**Around the OS**
+**Around the OS — and a second language**
 
 | Project | What it is |
 |---|---|
 | [**mortnet**](https://github.com/0xmortuex/mortnet) | TCP/IP stack written from scratch in Mort — NIC driver → ARP → IPv4 → ICMP → UDP → DHCP → DNS → TCP → HTTP — vendored into MORT OS |
 | [**MortHardware**](https://github.com/0xmortuex/MortHardware) | Reusable bare-metal drivers pulled out of MORT OS: PCI, RTL8139, AC'97 audio, UHCI USB |
 | [**mort-repo**](https://github.com/0xmortuex/mort-repo) | Package registry for `mpkg`, the MORT OS package manager |
+| [**vex-lang**](https://github.com/0xmortuex/vex-lang) | Language #2 — type inference, enums and exhaustive `match`, `Option`/`Result` with `?`, generics, compiled to its own bytecode VM |
 | [**nanomort**](https://github.com/0xmortuex/nanomort) | The whole idea in one Python file under 800 lines — a typed language that compiles to C and still boots a kernel |
 
 <br/>
@@ -137,7 +140,7 @@ AI agents can edit and build a kernel, but they can't *see* it boot — and they
 
 **Also for agents**
 
-[**claude-code-skills**](https://github.com/0xmortuex/claude-code-skills) — 40+ Claude Code skills for the unglamorous work that ships software. Before I add a skill, I check the existing ecosystem and only keep it if no well-known skill already does the job.
+[**claude-code-skills**](https://github.com/0xmortuex/claude-code-skills) — 46 Claude Code skills for the unglamorous work that ships software. Before I add a skill, I check the existing ecosystem and only keep it if no well-known skill already does the job.
 
 [**ClaudeCode-Brain**](https://github.com/0xmortuex/ClaudeCode-Brain) — turns local Claude Code history into a searchable, backlinked Obsidian vault.
 
@@ -147,9 +150,70 @@ AI agents can edit and build a kernel, but they can't *see* it boot — and they
 
 <br/>
 
+## 🧰 MCP servers for everyday dev work
+
+30 more servers for the jobs an AI assistant usually fumbles. They work offline, and they either only read or show a dry run before changing anything. Secrets are redacted by default.
+
+<div align="center">
+<img src="assets/mcp-toolbox.svg" width="880" alt="30 MCP servers for everyday dev work, in three groups: code and repo, infra and CI, files and media." />
+</div>
+
+<details>
+<summary><b>What each one does</b> — 30 servers</summary>
+<br/>
+
+**Code & repo**
+
+| Server | It answers… |
+|---|---|
+| [**impact-mcp**](https://github.com/0xmortuex/impact-mcp) | What breaks if I change this file? Dependents, affected tests, cycles (Python, JS/TS) |
+| [**testrun-mcp**](https://github.com/0xmortuex/testrun-mcp) | Run pytest, unittest, jest or vitest and get small structured failures, flaky detection, rerun-failed |
+| [**stacktrace-mcp**](https://github.com/0xmortuex/stacktrace-mcp) | A root-cause report from a crash in Python, Node, Java, Go, Rust or .NET |
+| [**gitrisk-mcp**](https://github.com/0xmortuex/gitrisk-mcp) | Hotspots, who knows this code, change coupling, bus factor |
+| [**debt-mcp**](https://github.com/0xmortuex/debt-mcp) | Every TODO/FIXME with its real age and author from git blame |
+| [**secretscan-mcp**](https://github.com/0xmortuex/secretscan-mcp) | Committed secrets in the tree and in git history, with rotation checklists |
+| [**depaudit-mcp**](https://github.com/0xmortuex/depaudit-mcp) | Known vulnerabilities in your lockfiles, transitive deps included, via OSV.dev |
+| [**license-mcp**](https://github.com/0xmortuex/license-mcp) | What licenses are my dependencies under, and can I ship this? |
+| [**envdoctor-mcp**](https://github.com/0xmortuex/envdoctor-mcp) | `.env` vs `.env.example`, undocumented and unused variables across 11 languages |
+| [**regexlab-mcp**](https://github.com/0xmortuex/regexlab-mcp) | Test a regex in real engines side by side, with ReDoS confirmed by timing |
+| [**structdiff-mcp**](https://github.com/0xmortuex/structdiff-mcp) | Semantic diffs of JSON, YAML, TOML, CSV, `.env` and INI, with RFC 6902 patches |
+
+**Infra & CI**
+
+| Server | It answers… |
+|---|---|
+| [**workflowlint-mcp**](https://github.com/0xmortuex/workflowlint-mcp) | GitHub Actions audit: pwn requests, script injection, unpinned actions, token permissions |
+| [**kubelint-mcp**](https://github.com/0xmortuex/kubelint-mcp) | 76 rules for Kubernetes manifests, no cluster or kubectl needed |
+| [**dockerlint-mcp**](https://github.com/0xmortuex/dockerlint-mcp) | 47 rules for Dockerfiles and compose files, layer-cache analysis |
+| [**tfplan-mcp**](https://github.com/0xmortuex/tfplan-mcp) | Risk-ranked review of a Terraform/OpenTofu plan: destroys, open firewalls, IAM broadening |
+| [**oaslint-mcp**](https://github.com/0xmortuex/oaslint-mcp) | OpenAPI lint and breaking changes between Swagger 2.0, 3.0 and 3.1 |
+| [**netcheck-mcp**](https://github.com/0xmortuex/netcheck-mcp) | Is my site healthy? TLS, DNS, headers, SPF/DMARC — with its own DNS resolver |
+| [**har-mcp**](https://github.com/0xmortuex/har-mcp) | Slowest requests, failures and the critical path in a browser HAR trace |
+| [**logs-mcp**](https://github.com/0xmortuex/logs-mcp) | Huge log files in constant memory: error clusters, timelines, request tracing |
+| [**ports-mcp**](https://github.com/0xmortuex/ports-mcp) | What is using this port? Free it with a two-step confirmed kill |
+
+**Files & media**
+
+| Server | It does… |
+|---|---|
+| [**sheet-mcp**](https://github.com/0xmortuex/sheet-mcp) | Read and edit `.xlsx` without destroying formulas, charts or macros |
+| [**sqlscope-mcp**](https://github.com/0xmortuex/sqlscope-mcp) | Explore an SQLite database, read-only by construction |
+| [**duckdb-mcp**](https://github.com/0xmortuex/duckdb-mcp) | Sandboxed SQL over local CSV, Parquet and JSON |
+| [**pdf-toolkit-mcp**](https://github.com/0xmortuex/pdf-toolkit-mcp) | Read, search, extract tables, merge and split PDFs — pure Python |
+| [**mdvault-mcp**](https://github.com/0xmortuex/mdvault-mcp) | Obsidian-style notes: BM25 search, backlinks, link-updating rename |
+| [**icskit-mcp**](https://github.com/0xmortuex/icskit-mcp) | Local `.ics` calendars: agenda, free time, DST-correct recurrence |
+| [**unpack-mcp**](https://github.com/0xmortuex/unpack-mcp) | Zip/tar inspection and extraction that blocks zip-slip and decompression bombs |
+| [**subtitle-mcp**](https://github.com/0xmortuex/subtitle-mcp) | Resync, shift, convert and repair SRT/VTT subtitles |
+| [**picture-mcp**](https://github.com/0xmortuex/picture-mcp) | Resize, convert, compress to a target size, strip GPS/EXIF |
+| [**ffmpeg-mcp**](https://github.com/0xmortuex/ffmpeg-mcp) | Compress to a target size, trim, GIF, extract audio — on PyPI as `mediakit-mcp` |
+
+</details>
+
+<br/>
+
 ## 📚 Build it yourself — "the hard way" guides
 
-Tutorials where you start from an empty file and end up with something that really works. Every chapter is taken from code that runs, and every step is checked in real QEMU.
+38 tutorials where you start from an empty file and end up with something that really works. Every chapter is taken from code that runs, and every step is checked — the OS guides in real QEMU.
 
 | Guide | You end up with |
 |---|---|
@@ -160,6 +224,17 @@ Tutorials where you start from an empty file and end up with something that real
 | [**MCP server the hard way**](https://github.com/0xmortuex/mcp-server-the-hard-way) | An MCP server that lets an AI debug a kernel, from raw RSP bytes to triple-fault diagnosis |
 | [**qemu-mcp the hard way**](https://github.com/0xmortuex/qemu-mcp-the-hard-way) | qemu-mcp rebuilt module by module — QMP, screenshots, typing, serial, snapshots |
 | [**Roblox anticheat the hard way**](https://github.com/0xmortuex/roblox-anticheat-the-hard-way) | A production-grade server-side anticheat, every line explained |
+| [**vex-lang the hard way**](https://github.com/0xmortuex/vex-lang-the-hard-way) | A typed language with inference, a bytecode compiler and a VM |
+
+<details>
+<summary><b>…and one for every everyday MCP server</b> — 30 more guides</summary>
+<br/>
+
+Each one rebuilds its server from scratch: the file formats, the safety rules, the edge cases, and the tests.
+
+[debt-mcp](https://github.com/0xmortuex/debt-mcp-the-hard-way) · [depaudit-mcp](https://github.com/0xmortuex/depaudit-mcp-the-hard-way) · [dockerlint-mcp](https://github.com/0xmortuex/dockerlint-mcp-the-hard-way) · [duckdb-mcp](https://github.com/0xmortuex/duckdb-mcp-the-hard-way) · [envdoctor-mcp](https://github.com/0xmortuex/envdoctor-mcp-the-hard-way) · [ffmpeg-mcp](https://github.com/0xmortuex/ffmpeg-mcp-the-hard-way) · [gitrisk-mcp](https://github.com/0xmortuex/gitrisk-mcp-the-hard-way) · [har-mcp](https://github.com/0xmortuex/har-mcp-the-hard-way) · [icskit-mcp](https://github.com/0xmortuex/icskit-mcp-the-hard-way) · [impact-mcp](https://github.com/0xmortuex/impact-mcp-the-hard-way) · [kubelint-mcp](https://github.com/0xmortuex/kubelint-mcp-the-hard-way) · [license-mcp](https://github.com/0xmortuex/license-mcp-the-hard-way) · [logs-mcp](https://github.com/0xmortuex/logs-mcp-the-hard-way) · [mdvault-mcp](https://github.com/0xmortuex/mdvault-mcp-the-hard-way) · [netcheck-mcp](https://github.com/0xmortuex/netcheck-mcp-the-hard-way) · [oaslint-mcp](https://github.com/0xmortuex/oaslint-mcp-the-hard-way) · [pdf-mcp](https://github.com/0xmortuex/pdf-mcp-the-hard-way) · [picture-mcp](https://github.com/0xmortuex/picture-mcp-the-hard-way) · [ports-mcp](https://github.com/0xmortuex/ports-mcp-the-hard-way) · [regexlab-mcp](https://github.com/0xmortuex/regexlab-mcp-the-hard-way) · [secretscan-mcp](https://github.com/0xmortuex/secretscan-mcp-the-hard-way) · [sheet-mcp](https://github.com/0xmortuex/sheet-mcp-the-hard-way) · [sqlscope-mcp](https://github.com/0xmortuex/sqlscope-mcp-the-hard-way) · [stacktrace-mcp](https://github.com/0xmortuex/stacktrace-mcp-the-hard-way) · [structdiff-mcp](https://github.com/0xmortuex/structdiff-mcp-the-hard-way) · [subtitle-mcp](https://github.com/0xmortuex/subtitle-mcp-the-hard-way) · [testrun-mcp](https://github.com/0xmortuex/testrun-mcp-the-hard-way) · [tfplan-mcp](https://github.com/0xmortuex/tfplan-mcp-the-hard-way) · [unpack-mcp](https://github.com/0xmortuex/unpack-mcp-the-hard-way) · [workflowlint-mcp](https://github.com/0xmortuex/workflowlint-mcp-the-hard-way)
+
+</details>
 
 <br/>
 
@@ -273,7 +348,7 @@ Paste notes, upload a PDF, snap a photo (OCR in English **and** Turkish), record
 ![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black)
 ![x86](https://img.shields.io/badge/x86-bare_metal-555?style=flat-square)
 ![QEMU](https://img.shields.io/badge/QEMU-FF6600?style=flat-square&logo=qemu&logoColor=white)
-![MCP](https://img.shields.io/badge/MCP-servers-22d3ee?style=flat-square)
+![MCP](https://img.shields.io/badge/MCP-43_servers-22d3ee?style=flat-square)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)

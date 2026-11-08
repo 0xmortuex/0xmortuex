@@ -17,7 +17,7 @@
   <rect x="1" y="1" width="878" height="322" rx="16" fill="url(#dots)"/>
   <rect x="1" y="1" width="878" height="322" rx="16" fill="url(#glow)"/>
   <rect x="1" y="1" width="878" height="322" rx="16" fill="url(#glow2)"/>
-  <text x="32" y="36" font-size="11.5" letter-spacing="2" fill="#9aa3b5" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">AGENT TOOLING FOR OS DEVELOPERS · 13 MCP SERVERS · NO GUEST AGENT, NO SSH</text>
+  <text x="32" y="36" font-size="11.5" letter-spacing="2" fill="#9aa3b5" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">OS DEVELOPMENT · 13 MCP SERVERS · NO GUEST AGENT, NO SSH</text>
   <rect x="32" y="128" width="170" height="112" rx="14" fill="#111623" stroke="url(#accent)" stroke-width="1.5"/>
   <text x="117.0" y="172" text-anchor="middle" font-size="17" font-weight="800" fill="#eef1f7" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif">your AI agent</text>
   <text x="117.0" y="194" text-anchor="middle" font-size="11.5" fill="#9aa3b5" font-family="'JetBrains Mono','Cascadia Code','SF Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace">Claude Code, or</text>
