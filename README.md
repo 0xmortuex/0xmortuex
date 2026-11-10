@@ -6,7 +6,7 @@
 
 <br/>
 
-[**λ Mort**](https://github.com/0xmortuex/Mort) &nbsp;·&nbsp; [**💾 MORT OS**](https://github.com/0xmortuex/MortOS) &nbsp;·&nbsp; [**🤖 OSdev MCP**](#-ai-agents-that-do-os-development) &nbsp;·&nbsp; [**🧰 Dev MCP**](#-mcp-servers-for-everyday-dev-work) &nbsp;·&nbsp; [**⬇ Vex**](https://0xmortuex.github.io/vex-website/) &nbsp;·&nbsp; [**⚡ FlashMind**](https://0xmortuex.github.io/FlashMind/) &nbsp;·&nbsp; [**📚 Guides**](#-build-it-yourself--the-hard-way-guides)
+[**λ Mort**](https://github.com/0xmortuex/Mort) &nbsp;·&nbsp; [**💾 MORT OS**](https://github.com/0xmortuex/MortOS) &nbsp;·&nbsp; [**λ vex-lang**](https://github.com/0xmortuex/vex-lang) &nbsp;·&nbsp; [**🤖 OSdev MCP**](#-ai-agents-that-do-os-development) &nbsp;·&nbsp; [**🧰 Dev MCP**](#-mcp-servers-for-everyday-dev-work) &nbsp;·&nbsp; [**⬇ Vex browser**](https://0xmortuex.github.io/vex-website/) &nbsp;·&nbsp; [**⚡ FlashMind**](https://0xmortuex.github.io/FlashMind/) &nbsp;·&nbsp; [**📚 Guides**](#-build-it-yourself--the-hard-way-guides)
 
 <br/>
 
@@ -18,11 +18,12 @@
 
 | | |
 |---|---|
+| λ **[Mort compiles itself](https://github.com/0xmortuex/Mort/tree/main/selfhost)** | The compiler is now also written in Mort. The Python compiler builds stage-1, stage-1 builds stage-2, and all three emit byte-identical C, checked in CI on Linux and Windows |
+| 💾 **[MORT OS: Borehole](https://github.com/0xmortuex/MortOS)** | The interface was rebuilt from scratch as a geological cross-section you drill through, plus a serial console and 262 boot tests run in CI |
 | 🧰 **30 new MCP servers** | Everyday dev tools for AI agents — test runner, import-graph impact analysis, secret scanning, linters for GitHub Actions, Kubernetes, Dockerfiles, Terraform plans and OpenAPI, plus safe tools for spreadsheets, PDFs, archives and media. [See them ↓](#-mcp-servers-for-everyday-dev-work) |
 | 📚 **A "hard way" guide for every one** | Each new server ships with a companion guide that rebuilds it from an empty file — 38 guides in total |
-| λ **[vex-lang](https://github.com/0xmortuex/vex-lang)** | My second language: type inference, enums with exhaustive `match`, `Option`/`Result` with `?`, generics, and its own bytecode VM |
+| λ **[vex-lang](https://github.com/0xmortuex/vex-lang)** | My second language, built to be embedded: a written spec, 6,400+ tests, and an embedding ABI so Mort programs call Vex scripts and Vex scripts call back into Mort |
 | 🤖 **13 OSdev MCP servers** | Agents boot kernels in QEMU, rewind them, single-step over the gdbstub, and decode ACPI, devicetrees, page tables and linker maps — [jump to them ↓](#-ai-agents-that-do-os-development) |
-| 💾 **MORT OS grew up** | Users, permissions and `sudo`, a hierarchical **MortFS v2**, a home launcher and Settings app, a power menu with lock / sleep / restart / shutdown, and a live RTC clock |
 | 🌐 **Vex profiles & import** | Side-by-side profiles with their own tabs, passwords and sync, plus importing from Chrome, Edge, Brave and Firefox |
 | ⚡ **FlashMind lecture mode** | Record a lecture in class and get a live transcript turned into notes, cards and exam alerts |
 | 📰 **[ai-news-tracker](https://github.com/0xmortuex/ai-news-tracker)** | Rebuilt as a serverless pipeline: a scheduled Action ingests ~75 sources, dedupes and clusters stories, and publishes JSON + Atom feeds that the Vex start page reads |
@@ -31,10 +32,11 @@
 
 ## λ The Mort stack — a language, then an OS written in it
 
-I wanted to know what's *underneath*, so I built **[Mort](https://github.com/0xmortuex/Mort)** — a statically-typed language whose whole compiler (lexer, parser, type checker, C code generator) is written from scratch in Python with **zero libraries**. Then I wrote **[MORT OS](https://github.com/0xmortuex/MortOS)** in it. Mort compiles to C instead of being interpreted for one reason: **an interpreter can't boot.**
+I wanted to know what's *underneath*, so I built **[Mort](https://github.com/0xmortuex/Mort)** — a statically-typed language whose whole compiler (lexer, parser, type checker, C code generator) is written from scratch in Python with **zero libraries**. Then I wrote **[MORT OS](https://github.com/0xmortuex/MortOS)** in it. Mort compiles to C instead of being interpreted for one reason: **an interpreter can't boot.** Now the compiler is written in Mort too, and **Mort compiles itself**: stage-1 and stage-2 produce byte-identical C.
 
 [![CI](https://github.com/0xmortuex/Mort/actions/workflows/ci.yml/badge.svg)](https://github.com/0xmortuex/Mort/actions/workflows/ci.yml)
-![tests](https://img.shields.io/badge/tests-330%20passing-brightgreen)
+![tests](https://img.shields.io/badge/tests-1098%20passing-brightgreen)
+![self-hosting](https://img.shields.io/badge/self--hosting-stage--2-8b5cf6)
 ![kernel](https://img.shields.io/badge/kernel%20written%20in-Mort-8b5cf6)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 
@@ -50,8 +52,9 @@ I wanted to know what's *underneath*, so I built **[Mort](https://github.com/0xm
 - **Real drivers** — PS/2 keyboard, PIT, CMOS clock, ATA disk, framebuffer, RTL8139 NIC
 - **A real filesystem** — MortFS v2 with directories, owners and Unix permission bits
 - **Users & `sudo`** — plus a shell with a working directory, `$PATH` and env vars
-- **A desktop** — Terminal, Files, a Vex-styled browser and Settings, on `F1`–`F5`
-- **Programs** — compiled Mort binaries talk to the kernel over `int 0x80`
+- **Borehole** — not a desktop: a rock cross-section you drill into, with Machine, Objects, Run and Terminate strata
+- **Programs** — 9 compiled Mort programs (`ls`, `cat`, `ps`, `ed`…) talk to the kernel over `int 0x80`
+- **Tested** — 262 boot tests drive it over a serial console in CI, on Windows and Linux
 - **Networking** — `net` gets an IP over DHCP, `httpd` serves a web page
 
 </td>
@@ -80,12 +83,12 @@ fn main() -> int {
 
 <div align="center">
 
-<a href="https://github.com/0xmortuex/MortOS"><img src="https://raw.githubusercontent.com/0xmortuex/MortOS/main/docs/desktop.png" width="880" alt="MORT OS graphical desktop — the window manager, drivers, filesystem and shell are all written in Mort" /></a>
+<a href="https://github.com/0xmortuex/MortOS"><img src="https://raw.githubusercontent.com/0xmortuex/MortOS/main/docs/borehole-surface.png" width="880" alt="MORT OS Borehole start screen: a dusk sky and a derrick over four rock strata labelled Machine, Objects, Run and Terminate, with a drill bit in the shaft" /></a>
 
-<a href="https://github.com/0xmortuex/MortOS#session--power"><img src="https://raw.githubusercontent.com/0xmortuex/MortOS/main/docs/mortos-power.png" width="436" alt="MORT OS power menu: Lock, Sleep, Restart, Shut down, with a live clock in the top bar" /></a>
-<a href="https://github.com/0xmortuex/mortnet"><img src="https://raw.githubusercontent.com/0xmortuex/MortOS/main/docs/mortos-net.png" width="436" alt="MORT OS networking: net leases 10.0.2.15 over DHCP, httpd serves on port 80" /></a>
+<a href="https://github.com/0xmortuex/MortOS#session--power"><img src="https://raw.githubusercontent.com/0xmortuex/MortOS/main/docs/borehole-terminate.png" width="436" alt="MORT OS Terminate stratum: Lock, Sleep, Restart and Shut down as beds of rock" /></a>
+<a href="https://github.com/0xmortuex/mortnet"><img src="https://raw.githubusercontent.com/0xmortuex/MortOS/main/docs/borehole-net.png" width="436" alt="MORT OS shell inside the Run stratum: net brings the NIC up and DHCP binds 10.0.2.15" /></a>
 
-<sub>The desktop, the power menu, and <code>httpd</code> serving a page — a web server, on an OS, over a TCP/IP stack, every layer in one language I wrote.</sub>
+<sub>The Borehole start screen, the power stratum, and the shell getting an IP over DHCP: the interface, the drivers and the TCP/IP stack are all written in one language I wrote.</sub>
 
 </div>
 
@@ -96,7 +99,7 @@ fn main() -> int {
 | [**mortnet**](https://github.com/0xmortuex/mortnet) | TCP/IP stack written from scratch in Mort — NIC driver → ARP → IPv4 → ICMP → UDP → DHCP → DNS → TCP → HTTP — vendored into MORT OS |
 | [**MortHardware**](https://github.com/0xmortuex/MortHardware) | Reusable bare-metal drivers pulled out of MORT OS: PCI, RTL8139, AC'97 audio, UHCI USB |
 | [**mort-repo**](https://github.com/0xmortuex/mort-repo) | Package registry for `mpkg`, the MORT OS package manager |
-| [**vex-lang**](https://github.com/0xmortuex/vex-lang) | Language #2 — type inference, enums and exhaustive `match`, `Option`/`Result` with `?`, generics, compiled to its own bytecode VM |
+| [**vex-lang**](https://github.com/0xmortuex/vex-lang) | Language #2, an extension language for native programs: type inference, enums and exhaustive `match`, `Option`/`Result` with `?`, generics, its own bytecode VM, a written spec, and two-way calls with Mort |
 | [**nanomort**](https://github.com/0xmortuex/nanomort) | The whole idea in one Python file under 800 lines — a typed language that compiles to C and still boots a kernel |
 
 <br/>
